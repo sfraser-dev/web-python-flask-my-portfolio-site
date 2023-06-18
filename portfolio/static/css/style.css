@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+/* debug! */
+/* body * {
+    border: 1px dashed red;
+} */
+
 body {
     margin-top: 80px;
     background-color: pink;
@@ -62,4 +67,8 @@ body {
 
 .contact__link:hover {
     color: #4cafda;
+}
+
+u-bare-link {
+    text-decoration: none;
 }
