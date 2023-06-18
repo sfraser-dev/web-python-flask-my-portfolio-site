@@ -4,6 +4,7 @@
 ### Mine ###
 *.zip
 *.7z
+.flaskenv
 
 ### Flask ###
 instance/*
