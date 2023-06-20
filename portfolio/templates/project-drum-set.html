@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main class="main main--project">
+    <div>
+        <img class="hero"
+        src="{{ url_for('static', filename=project['hero']) }}"
+        alt="hero image for the dice game">
+
+        <article class="project">
+            <article class="project__content">
+                <h2 class="project__heading">
+                    {{ project['name'] }}
+                </h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio architecto minima saepe, maxime voluptatibus modi ea veritatis nulla dignissimos natus blanditiis eaque incidunt provident ducimus fugiat ipsum accusamus! Nulla incidunt maiores inventore doloribus blanditiis dolores veniam totam hic vitae quos.
+                </p>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias inventore magnam sint ab nobis architecto labore, officiis, incidunt harum tempore eaque exercitationem, ducimus animi accusamus earum distinctio commodi. Voluptatem, minima.
+                </p>
+            </article>
+
+            <section>
+                <article class="project__meta-group">
+                    <h3 class="project__heading project__heading--meta>">Technologies used</h3>
+
+                    <ul class="technology-list">
+                        <li class="technology-list__item">HTML</li>
+                        <li class="technology-list__item">CSS</li>
+                        <li class="technology-list__item">JavaScript</li>
+                    </ul>
+                    </article>
+
+                    <a class="cta" href="{{ project['prod'] }}">
+                        <img class="cta__icon" src="{{ url_for('static', filename='images/pointer.svg') }}" alt="production icon">
+                        View in production
+                    </a>
+
+            </section>
+        </article>
+    </div>
+</main>
+{% endblock %}

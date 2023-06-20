@@ -1,38 +1,41 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, abort
 from dotenv import load_dotenv
-
 
 app = Flask(__name__)
 load_dotenv()
 
 projects = [
     {
-        "name": "Drums",
+        "name": "Drum Set",
         "thumb": "images/drum-wee.png",
         "hero": "images/drum-hero.png",
         "categories": ["HTML", "CSS", "JS"],
-        "slug": "drums",
-        "production": "https://www.bbc.co.uk",
+        "slug": "drum-set",
+        "prod": "https://www.bbc.co.uk",
     },
     {
-        "name": "Dice",
+        "name": "Dice Game",
         "thumb": "images/dice-wee.png",
         "hero": "images/dice-hero.png",
         "categories": ["HTML", "CSS", "JS"],
-        "slug": "dice",
-        "production": "https://www.bbc.co.uk",
+        "slug": "dice-game",
+        "prod": "https://www.bbc.co.uk",
     },
     {
-        "name": "Memory",
+        "name": "Memory Game",
         "thumb": "images/memory-wee.png",
         "hero": "images/memory-hero.png",
         "categories": ["HTML", "CSS", "JS"],
-        "slug": "dice",
-        "production": "https://www.bbc.co.uk",
-
+        "slug": "memory-game",
+        "prod": "https://www.bbc.co.uk",
     },
 ]
 
+# dictionary comprehension
+# eg: drum-set: { drum dict syntax here }
+# eg: dice-game: { dice dict syntax here }
+# eg: memory-game: { dice dict syntax here }
+slug_to_project = {project["slug"]: project for project in projects}
 
 @app.route("/")
 def home():
@@ -47,3 +50,16 @@ def about():
 @app.route("/contact/")
 def contact():
     return render_template("contact.html")
+
+@app.route("/project/<string:slug>")
+def project(slug):
+    if slug not in slug_to_project:
+        abort(404)
+    return render_template(f"project-{slug}.html", project=slug_to_project[slug])
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template("404.html"), 404
+
+# handle 500 error?
+# 400 error if handling form data
