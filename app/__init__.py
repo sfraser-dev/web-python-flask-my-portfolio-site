@@ -12,7 +12,7 @@ def create_app():
             "hero": "images/drum-hero.png",
             "categories": ["HTML", "CSS", "JS"],
             "slug": "drum-set",
-            "prod": "https://microblog-flask-w3css.onrender.com",
+            "prod": "https://sfraser-microblog.onrender.com",
         },
         {
             "name": "Dice Game",
@@ -20,7 +20,7 @@ def create_app():
             "hero": "images/dice-hero.png",
             "categories": ["HTML", "CSS", "JS"],
             "slug": "dice-game",
-            "prod": "https://microblog-flask-w3css.onrender.com",
+            "prod": "https://sfraser-microblog.onrender.com",
         },
         {
             "name": "Memory Game",
@@ -28,7 +28,7 @@ def create_app():
             "hero": "images/memory-hero.png",
             "categories": ["HTML", "CSS", "JS"],
             "slug": "memory-game",
-            "prod": "https://microblog-flask-w3css.onrender.com",
+            "prod": "https://sfraser-microblog.onrender.com",
         },
     ]
 
