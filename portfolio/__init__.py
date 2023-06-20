@@ -66,5 +66,3 @@ def create_app():
 
 # handle 500 error?
 # 400 error if handling form data
-
-#.flaskenv to microblog
