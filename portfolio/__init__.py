@@ -11,7 +11,7 @@ projects = [
         "hero": "images/drum-hero.png",
         "categories": ["HTML", "CSS", "JS"],
         "slug": "drum-set",
-        "prod": "https://www.bbc.co.uk",
+        "prod": "https://microblog-flask-w3css.onrender.com",
     },
     {
         "name": "Dice Game",
@@ -19,7 +19,7 @@ projects = [
         "hero": "images/dice-hero.png",
         "categories": ["HTML", "CSS", "JS"],
         "slug": "dice-game",
-        "prod": "https://www.bbc.co.uk",
+        "prod": "https://microblog-flask-w3css.onrender.com",
     },
     {
         "name": "Memory Game",
@@ -27,7 +27,7 @@ projects = [
         "hero": "images/memory-hero.png",
         "categories": ["HTML", "CSS", "JS"],
         "slug": "memory-game",
-        "prod": "https://www.bbc.co.uk",
+        "prod": "https://microblog-flask-w3css.onrender.com",
     },
 ]
 
