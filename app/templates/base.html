@@ -1,3 +1,4 @@
+<!-- The base template that other files will extend. -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +17,8 @@
 <body>
     <header class="header">
         <h1>John Doe</h1>
+        <!-- Navbar (nav__link--active class applies to the current page only) -->
+        <!-- url_for(home) is the url in the @app.route decorator for the home() function -->
         <nav class="nav">
             <a href="{{ url_for('home') }}"
                 class="nav__link {{ 'nav__link--active' if request.path == url_for('home') }}">
@@ -26,6 +29,7 @@
                 class="nav__link {{ 'nav__link--active' if request.path == url_for('contact') }}">Contact</a>
         </nav>
     </header>
+    <!-- Files that extend base.html put their "block content" here (their bodies) -->
     {% block content %}
     {% endblock %}
 </body>
