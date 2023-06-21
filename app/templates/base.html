@@ -7,19 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Doe</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/w3.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
     <header class="header">
-        <h1>John Doe</h1>
         <!-- Navbar (nav__link--active class applies to the current page only) -->
         <!-- url_for(contact) is the url in the @app.route decorator for the contact() function -->
-        <nav class="nav">
+        <!-- <nav class="nav">
             <a href="{{ url_for('home') }}"
                 class="nav__link {{ 'nav__link--active' if request.path == url_for('home') }}">Home</a>
             <a href="{{ url_for('projects_page') }}"
@@ -27,11 +25,27 @@
                 Projects</a>
             <a href="{{ url_for('contact') }}"
                 class="nav__link {{ 'nav__link--active' if request.path == url_for('contact') }}">Contact</a>
-        </nav>
+        </nav> -->
+
+        <div class="w3-top">
+            <div class="w3-bar w3-black w3-card-4">
+              <a href="{{ url_for('home') }}" class="w3-text-gray w3-bar-item w3-padding-large my-navlink
+              {{ 'my-navlink-active' if request.path == url_for('home') }}">Home</a>
+              <a href="{{ url_for('projects_page') }}" class="w3-text-gray w3-bar-item w3-padding-large my-navlink
+              {{ 'my-navlink-active' if request.path == url_for('projects_page') }}">Projects</a>
+              <a href="{{ url_for('contact') }}" class="w3-text-gray w3-bar-item w3-padding-large my-navlink
+              {{ 'my-navlink-active' if request.path == url_for('contact') }}">Contact</a>
+            </div>
+          </div>
+
+        <h1>John Doe</h1>
+
     </header>
     <!-- Files that extend base.html put their "block content" here (their bodies) -->
     {% block content %}
     {% endblock %}
+
+    <!-- <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script> -->
 </body>
 
 </html>

@@ -262,3 +262,17 @@ body {
 .u-bare-link {
   text-decoration: none;
 }
+
+
+/****************************/
+.my-navlink {
+  text-decoration: none;
+}
+
+.my-navlink:hover {
+  text-decoration: underline;
+}
+
+.my-navlink-active {
+  color: white!important;
+}
