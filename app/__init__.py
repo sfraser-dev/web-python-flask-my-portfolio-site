@@ -65,15 +65,16 @@ def create_app():
     #   }
     # }
 
-    # Home endpoint. Note url_for('home') returns the route URL "/" because def is home)
-    @app.route("/")
-    def home():
-        return render_template("home.html", projects=projects)
+    # Projects endpoint.
+    # Note url_for('projects_page') returns URL "/projects/" as def is projects_page())
+    @app.route("/projects/")
+    def projects_page():
+        return render_template("projects.html", projects=projects)
 
     # About endpoint.
-    @app.route("/about/")
-    def about():
-        return render_template("about.html")
+    @app.route("/")
+    def home():
+        return render_template("home.html")
 
     # Contact endpoint.
     @app.route("/contact/")
@@ -82,7 +83,7 @@ def create_app():
 
     # Project/project-name slug endpoints.
     # <string:slug> is a route with a variable for the URL (variable slug as a string).
-    @app.route("/project/<string:slug>")
+    @app.route("/projects/<string:slug>")
     def project(slug):
         # User has input an URL we don't recognise - give 404 error.
         if slug not in slug_to_project:

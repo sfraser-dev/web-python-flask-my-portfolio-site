@@ -18,13 +18,13 @@
     <header class="header">
         <h1>John Doe</h1>
         <!-- Navbar (nav__link--active class applies to the current page only) -->
-        <!-- url_for(home) is the url in the @app.route decorator for the home() function -->
+        <!-- url_for(contact) is the url in the @app.route decorator for the contact() function -->
         <nav class="nav">
             <a href="{{ url_for('home') }}"
-                class="nav__link {{ 'nav__link--active' if request.path == url_for('home') }}">
+                class="nav__link {{ 'nav__link--active' if request.path == url_for('home') }}">Home</a>
+            <a href="{{ url_for('projects_page') }}"
+                class="nav__link {{ 'nav__link--active' if request.path == url_for('projects_page') }}">
                 Projects</a>
-            <a href="{{ url_for('about') }}"
-                class="nav__link {{ 'nav__link--active' if request.path == url_for('about') }}">About</a>
             <a href="{{ url_for('contact') }}"
                 class="nav__link {{ 'nav__link--active' if request.path == url_for('contact') }}">Contact</a>
         </nav>
