@@ -1,26 +1,23 @@
 {% extends "base.html" %}
 
 <!-- Projects to be shown in a css grid via a for loop. -->
-<!-- Projects are described via a common dictionary format detailed in __init__.py -->
-<!-- The body for the grid of projects page. -->
+<!-- Projects are described via a common dictionary format detailed in __init__.py. -->
 {% block content %}
 <main class="main">
     <section class="projects">
         {% for project in projects %}
-        <a class="u-bare-link" href="{{ url_for('project', slug=project['slug']) }}">
-            <!-- The card (which if within an anchor tag - fully clickable). -->
-            <article class="project-card">
-                <img class="project-card__image" src="{{ url_for('static', filename=project['thumb']) }}"
+        <a class="my-project-card-link" href="{{ url_for('project', slug=project['slug']) }}">
+            <!-- The card (which is fully within an anchor tag - all clickable). -->
+            <article class="w3-card-2 w3-center my-project-card">
+                <!-- The name of this project. -->
+                <h2 class="my-project-card-name">{{ project["name"] }}</h2>
+                <img class="my-project-card-image" src="{{ url_for('static', filename=project['thumb']) }}"
                     alt="{{ project['name'] }} hero image">
-                <header class="project-card__meta">
-                    <ul class="categories">
-                        <!-- A list of all the categories (technologies used) for the project. -->
-                        {% for category in project["categories"] %}
-                        <li class="categories__tag">{{ category }}</li>
-                        {% endfor %}
-                    </ul>
-                    <!-- The name of this project. -->
-                    <h2 class="project-card__name">{{ project["name"] }}</h2>
+                <header>
+                    <!-- A list of all the categories (technologies used) for the project. -->
+                    {% for category in project["categories"] %}
+                    <div class="w3-tag w3-round w3-white my-project-technologies-tag">{{ category }}</div>
+                    {% endfor %}
                 </header>
             </article>
         </a>

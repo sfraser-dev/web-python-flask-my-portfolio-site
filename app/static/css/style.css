@@ -265,21 +265,21 @@ body {
 
 
 /****************************/
-.my-navlink-inactive {
+.my-nav-link-inactive {
   text-decoration: none;
 }
 
-.my-navlink-inactive:hover {
+.my-nav-link-inactive:hover {
   text-decoration: underline;
 }
 
-.my-navlink-active {
   /* w3.css needs "!important" to override its colors */
+.my-nav-link-active {
   color: white!important;
   text-decoration: none;
 }
 
-.my-center-element{
+.my-contact-center-element{
   display: flex;
   justify-content: center;
   text-align: center;
@@ -296,9 +296,38 @@ body {
 }
 
 .my-contact:hover {
-  transform: translateY(-0.25rem);
+  transform: translate(0.25rem, -0.25rem);
 }
 
 .my-contact-link {
   text-decoration: none;
+}
+
+.my-project-technologies-tag {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 5px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #0e0e0e;
+  margin-bottom: 0.3rem;
+}
+
+.my-project-card {
+  padding-bottom: 0.5rem;
+  margin: 1rem 0 0.75rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.my-project-card-link {
+  text-decoration: none;
+}
+
+.my-project-card-image {
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
+.my-project-card:hover {
+  transform: translate(0.35rem, -0.35rem)
 }
