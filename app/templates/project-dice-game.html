@@ -1,18 +1,18 @@
 {% extends "base.html" %}
 
-<!-- The body for the dice-game project. -->
+<!-- The body for the project. -->
 {% block content %}
-<!-- <main class="main main--project"> -->
 <main class="my-main">
     <div>
-        <img class="my-project-hero" src="{{ url_for('static', filename=project['hero']) }}" alt="hero image">
-
         <article class="my-project">
+            <img class="my-project-hero" src="{{ url_for('static', filename=project['hero']) }}" alt="hero image">
+
             <article class="my-project-content">
                 <h2 class="my-project-heading">
                     {{ project['name'] }}
                 </h2>
-
+                <p><button class="w3-button w3-green w3-round" type="button">
+                        View in production</button></p>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio architecto minima saepe, maxime
                     voluptatibus modi ea veritatis nulla dignissimos natus blanditiis eaque incidunt provident ducimus
@@ -26,11 +26,6 @@
                 </p>
             </article>
 
-            <section>
-                <a class="cta" href="{{ project['production'] }}" target="_blank" rel="noopener noreferrer">
-                    View in production
-                </a>
-            </section>
         </article>
     </div>
 </main>

@@ -5,7 +5,7 @@
 }
 
 :root {
-  --max-width-for-projects-column: 50rem;
+  --max-width-for-reading-column: 800px;
   /* A common readability setting */
   --line-height-for-readability: 150%;
 }
@@ -18,254 +18,6 @@ body {
   margin-top: 20px;
 }
 
-.header {
-  text-align: center;
-}
-
-.nav {
-  margin-bottom: 3rem;
-  font-size: 1.2rem;
-}
-
-.nav__link {
-  text-decoration: none;
-  color: #1c2023;
-}
-
-.nav__link:not(:last-of-type) {
-  margin-right: 2.5rem;
-}
-
-.nav__link--active {
-  font-weight: bold;
-}
-
-.nav__link:hover {
-  text-decoration: underline;
-}
-
-.main {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-}
-
-.main--about,
-.main--error {
-  flex-direction: column;
-  max-width: 500px;
-  padding: 0 1rem;
-  line-height: 150%;
-}
-
-.contact {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
-  text-align: center;
-}
-
-.contact__details {
-  /* 1ch is equivalent to the width of the 0 character at the current
-       font size. This allows to create a roughly one letter gap bewteen
-       the contact label and the associated contact detail */
-
-  margin-left: 1ch;
-}
-
-.contact__link {
-  color: #000;
-  text-decoration: none;
-
-  /* We can modify the text decoration colour and thickness to
-       create a custom underline, but the text-decoration-thickness
-       property isn't currently supported on Chrome.
-       
-       Using box-shadow to simulate the underline gives us a
-       cross-browser solution. */
-
-  box-shadow: 0 3px 0 0 #4cafda;
-}
-
-.contact__link:hover {
-  color: #4cafda;
-}
-
-.projects {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-column-gap: 1.25rem;
-  justify-content: center;
-  justify-items: center;
-  max-width: 21.875rem;
-  margin: 0 auto;
-}
-
-@media (min-width: 48.75em) {
-  .projects {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 45rem;
-  }
-}
-
-@media (min-width: 70em) {
-  .projects {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 68rem;
-  }
-}
-
-.project-card {
-  padding: 0.75rem 0;
-}
-
-.project-card__image {
-  max-width: 100%;
-  margin-bottom: 1rem;
-  transition: transform 0.2s ease-in-out;
-}
-
-.project-card__meta {
-  padding: 0 1.25rem;
-}
-
-.project-card__name {
-  margin: 0;
-  font-size: 1.5rem;
-  line-height: 2.25rem;
-  color: #1c2023;
-}
-
-.project-card:hover .project-card__image {
-  transform: translateY(-0.5rem);
-}
-
-.project-card:hover .project-card__name {
-  text-decoration: underline;
-}
-
-.categories {
-  display: flex;
-  padding: 0;
-  margin: 0 0 0.75rem;
-  color: #3d84a3;
-  list-style: none;
-  line-height: 1.45;
-  text-transform: uppercase;
-  font-size: 1.1rem;
-  letter-spacing: 0.075rem;
-}
-
-/* Adds an ::after pseudo-element to each category tag, except the last one.
-   This psuedo-element contains a pipe character (|), which acts as a seperator
-   between the tags. */
-
-.categories__tag:not(:last-of-type)::after {
-  content: "|";
-  margin: 0 0.25rem;
-}
-
-.hero {
-  width: 100%;
-  max-width: var(--max-width-for-projects-column);
-  margin-bottom: 1.5rem;
-}
-
-.project {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.2rem;
-  max-width: var(--max-width-for-projects-column);
-  padding: 0 1rem;
-}
-
-.project__content {
-  margin-bottom: 1rem;
-  line-height: 150%;
-}
-
-@media (min-width: 48.75em) {
-  .project {
-    flex-direction: row;
-    padding: 0;
-  }
-
-  .project__content {
-    flex: 7;
-    margin-right: 3rem;
-    padding: 0;
-  }
-}
-
-.project__heading {
-  margin: 0;
-  font-size: 2rem;
-  line-height: 150%;
-}
-
-.project__heading--meta {
-  font-size: inherit;
-  margin-bottom: 1rem;
-}
-
-.project__meta-group {
-  margin-bottom: 1rem;
-}
-
-.project__meta-group,
-.cta {
-  padding: 1rem;
-  background-color: #d4eafa;
-  border-radius: 6px;
-}
-
-.cta {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  color: #1c2023;
-  text-decoration: none;
-}
-
-.cta:hover {
-  text-decoration: underline;
-}
-
-.cta__icon {
-  margin-right: 0.5rem;
-  transform: translateY(1px);
-}
-
-.technology-list {
-  list-style: none;
-  padding-left: 0.75rem;
-  margin: 0;
-  line-height: 1.75;
-}
-
-.technology-list__item:before {
-  content: "";
-  display: inline-block;
-  height: 1rem;
-  width: 1rem;
-  background-image: url("/static/images/list-check.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-right: 0.5rem;
-
-  /* necessary for vertical centering */
-  transform: translateY(2px);
-}
-
-/* Utility class to remove link styles */
-.u-bare-link {
-  text-decoration: none;
-}
-
-
-/****************************/
 .my-nav-link-inactive {
   text-decoration: none;
 }
@@ -285,27 +37,30 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center; 
+  /* Make elements with width defined sit centrally in parent's container. Auto
+  means browser will determine left & right margins (and it sets them equal) */
   margin: 0 auto; 
 }
 
-/* Flexbox direction to column for proper content on these pages. */
+/* Flexbox direction to column for proper content on these specific pages. */
 .my-main-home,
 .my-main-error {
   flex-direction: column;
-  max-width: 500px;
-  padding: 0 1rem;
+  max-width: var(--max-width-for-reading-column);
+  padding: 0 15px;
   line-height: var(--line-height-for-readability);
 }
 
-/* Flexbox for centering again. */
-.my-contact-center-element{
+/***** The CONTACT PAGE styling. *****/
+.my-contacts {
+  margin-top: 25px;
+}
+
+/* Flexbox for centering contact options. */
+.my-contact-center-element {
   display: flex;
   justify-content: center;
   text-align: center;
-}
-
-.my-contacts {
-  margin-top: 25px;
 }
 
 .my-contact {
@@ -315,103 +70,78 @@ body {
 }
 
 .my-contact:hover {
-  transform: translate(0.25rem, -0.25rem);
+  transform: translate(4px, -4px);
 }
 
 .my-contact-link {
   text-decoration: none;
 }
 
-.my-project-technologies-tag {
+/***** The PROJECTS PAGE containing a grid of projects. *****/
+.my-projects-technologies-tag {
   font-size: 0.9rem;
   font-weight: 500;
   padding: 3px;
   border-width: 2px;
   border-style: solid;
   border-color: #0e0e0e;
-  margin-bottom: 0.3rem;
+  margin-bottom: 5px;
 }
 
-.my-project-card {
+.my-projects-card {
   padding-bottom: 0.5rem;
-  margin: 1rem 0 0.75rem;
+  margin: 16px 0 12px;
   transition: transform 0.2s ease-in-out;
 }
 
-.my-project-card-name {
-  padding-top: 0.3rem;
+.my-projects-card-title {
+  padding-top: 5px;
   font-size: 1.25rem;
 }
 
-.my-project-card-link {
+.my-projects-card-link {
   text-decoration: none;
 }
 
-.my-project-card-image {
+.my-projects-card-image {
   max-width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 
-.my-project-card:hover {
-  transform: translate(0.35rem, -0.35rem)
+.my-projects-card:hover {
+  transform: translate(6px, -6px)
 }
 
-/* Grid for displaying the projects in the projects page. */
+/* Grid for displaying all the different projects. */
 .my-projects {
   display: grid;
   grid-template-columns: 1fr;
-  grid-column-gap: 1.25rem;
+  grid-column-gap: 20px;
   justify-content: center;
   justify-items: center;
-  max-width: 21.875rem;
+  max-width: 350px;
   margin: 0 auto;
 }
 
-/* Responsive grid. */
-@media (min-width: 48.75em) {
+/* Responsive grid for all the projects page. */
+@media (min-width: 780px) {
   .my-projects {
     grid-template-columns: repeat(2, 1fr);
-    max-width: 45rem;
+    max-width: 720px;
   }
 }
-
-@media (min-width: 70em) {
+@media (min-width: 1120px) {
   .my-projects {
     grid-template-columns: repeat(3, 1fr);
-    max-width: 68rem;
+    max-width: 1080px;
   }
 }
 
+/***** Individual PROJECT PAGES. *****/
 .my-project {
-  display: flex;
-  flex-direction: column;
   font-size: 1.2rem;
-  max-width: var(--max-width-for-projects-column);
-  padding: 0 1rem;
-}
-
-.my-project-hero {
-  width: 100%;
-  max-width: var(--max-width-for-projects-column);
-  margin-bottom: 1.5rem;
-}
-
-.my-project-content {
-  margin-bottom: 1rem;
-  line-height: var(--line-height-for-readability);
-}
-
-@media (min-width: 48.75em) {
-  .my-project {
-    flex-direction: row;
-    padding: 0;
-  }
-
-  .my-project-content {
-    flex: 7;
-    margin-right: 3rem;
-    padding: 0;
-  }
+  max-width: var(--max-width-for-reading-column);
+  padding: 0 16px;
 }
 
 .my-project-heading {
@@ -419,3 +149,23 @@ body {
   font-size: 2rem;
   line-height: var(--line-height-for-readability);
 }
+
+.my-project-hero {
+  width: 100%;
+  max-width: var(--max-width-for-reading-column);
+  margin-bottom: 25px;
+}
+
+.my-project-content {
+  margin-bottom: 16px;
+  line-height: var(--line-height-for-readability);
+}
+
+/* Don't need to pad as width now much greater than
+var(--line-height-for-readability) */
+@media (min-width: 880px) {
+  .my-project, .my-project-content {
+    padding: 0;
+  }
+}
+

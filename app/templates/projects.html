@@ -7,17 +7,17 @@
     <section class="my-projects">
         {% for project in projects %}
         <!-- Use the class to remove the default link text decoration. -->
-        <a class="my-project-card-link" href="{{ url_for('project', slug=project['slug']) }}">
+        <a class="my-projects-card-link" href="{{ url_for('project', slug=project['slug']) }}">
             <!-- The card (which is fully within an anchor tag - entirely clickable). -->
-            <article class="w3-card-2 w3-center my-project-card">
+            <article class="w3-card-2 w3-center my-projects-card">
                 <!-- The name of this project. -->
-                <h2 class="my-project-card-name">{{ project["name"] }}</h2>
-                <img class="my-project-card-image" src="{{ url_for('static', filename=project['thumb']) }}"
+                <h2 class="my-projects-card-title">{{ project["name"] }}</h2>
+                <img class="my-projects-card-image" src="{{ url_for('static', filename=project['thumb']) }}"
                     alt="{{ project['name'] }} hero image">
                 <header>
                     <!-- A list of all the categories (technologies used) for the project. -->
                     {% for category in project["categories"] %}
-                    <div class="w3-tag w3-round w3-white my-project-technologies-tag">{{ category }}</div>
+                    <div class="w3-tag w3-round w3-white my-projects-technologies-tag">{{ category }}</div>
                     {% endfor %}
                 </header>
             </article>
