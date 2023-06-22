@@ -3,13 +3,14 @@
 <!-- Projects to be shown in a css grid via a for loop. -->
 <!-- Projects are described via a common dictionary format detailed in __init__.py. -->
 {% block content %}
-<main class="my-main">
+<main class="my-main-flex-centering">
+
     <section class="my-projects">
         {% for project in projects %}
         <!-- Use the class to remove the default link text decoration. -->
         <a class="my-projects-card-link" href="{{ url_for('project', slug=project['slug']) }}">
             <!-- The card (which is fully within an anchor tag - entirely clickable). -->
-            <article class="w3-card-2 w3-center my-projects-card">
+            <article class="w3-card-4 w3-light-gray w3-center my-projects-card">
                 <!-- The name of this project. -->
                 <h2 class="my-projects-card-title">{{ project["name"] }}</h2>
                 <img class="my-projects-card-image" src="{{ url_for('static', filename=project['thumb']) }}"

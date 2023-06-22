@@ -39,8 +39,8 @@ def create_app():
         },
         {
             "name": "Microblog",
-            "thumb": "images/dice-wee.png",
-            "hero": "images/dice-hero.png",
+            "thumb": "images/microblog-wee.png",
+            "hero": "images/microblog-hero.png",
             "categories": ["Python", "Flask", "MongoDB"],
             "slug": "microblog",
             "production": "https://sfraser-microblog.onrender.com",

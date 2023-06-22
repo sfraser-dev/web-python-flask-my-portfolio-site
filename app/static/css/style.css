@@ -1,9 +1,11 @@
+/***** STANDARD. *****/
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/***** VARIABLES. *****/
 :root {
   --max-width-for-reading-column: 800px;
   /* A common readability setting */
@@ -18,6 +20,7 @@ body {
   margin-top: 20px;
 }
 
+/***** NAVBAR. *****/
 .my-nav-link-inactive {
   text-decoration: none;
 }
@@ -26,25 +29,27 @@ body {
   text-decoration: underline;
 }
 
-  /* w3.css needs "!important" to override its colors */
+/* Need to use !important to override w3css colors */
 .my-nav-link-active {
   color: white!important;
   text-decoration: none;
 }
 
-/* Flexbox for centering. */
-.my-main {
+/***** Making "main" elements FLEXBOX CENTERED containers *****/
+.my-main-flex-centering {
   display: flex;
   flex-direction: row;
   justify-content: center; 
-  /* Make elements with width defined sit centrally in parent's container. Auto
-  means browser will determine left & right margins (and it sets them equal) */
+  /* Make elements with width defined sit centrally in parent's 
+  container. Auto means browser will determine left & right
+  margins (and it sets them equal) */
   margin: 0 auto; 
 }
 
 /* Flexbox direction to column for proper content on these specific pages. */
-.my-main-home,
-.my-main-error {
+.my-main-home-page,
+.my-main-error-page,
+.my-contact-page {
   flex-direction: column;
   max-width: var(--max-width-for-reading-column);
   padding: 0 15px;
@@ -52,20 +57,9 @@ body {
 }
 
 /***** The CONTACT PAGE styling. *****/
-.my-contacts {
-  margin-top: 25px;
-}
-
-/* Flexbox for centering contact options. */
-.my-contact-center-element {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
 .my-contact {
-  font-size: 1.25rem;
-  margin: 15px 0;
+  font-size: 1.5rem;
+  margin-top: 50px;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -77,7 +71,7 @@ body {
   text-decoration: none;
 }
 
-/***** The PROJECTS PAGE containing a grid of projects. *****/
+/***** The PROJECTS PAGE a collection of projects in a grid. *****/
 .my-projects-technologies-tag {
   font-size: 0.9rem;
   font-weight: 500;
@@ -97,6 +91,7 @@ body {
 .my-projects-card-title {
   padding-top: 5px;
   font-size: 1.25rem;
+  font-weight: 500;
 }
 
 .my-projects-card-link {
@@ -112,7 +107,7 @@ body {
   transform: translate(6px, -6px)
 }
 
-/* Grid for displaying all the different projects. */
+/* Grid for displaying all the collection of projects. */
 .my-projects {
   display: grid;
   grid-template-columns: 1fr;
@@ -123,7 +118,7 @@ body {
   margin: 0 auto;
 }
 
-/* Responsive grid for all the projects page. */
+/* Responsive grid for the collection of projects page. */
 @media (min-width: 780px) {
   .my-projects {
     grid-template-columns: repeat(2, 1fr);
@@ -144,16 +139,17 @@ body {
   padding: 0 16px;
 }
 
+.my-project-hero {
+  width: 100%;
+  max-width: var(--max-width-for-reading-column);
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+
 .my-project-heading {
   margin: 0;
   font-size: 2rem;
   line-height: var(--line-height-for-readability);
-}
-
-.my-project-hero {
-  width: 100%;
-  max-width: var(--max-width-for-reading-column);
-  margin-bottom: 25px;
 }
 
 .my-project-content {
