@@ -280,21 +280,24 @@ body {
   text-decoration: none;
 }
 
+/* Flexbox for centering. */
 .my-main {
   display: flex;
   flex-direction: row;
   justify-content: center; 
   margin: 0 auto; 
 }
+
+/* Flexbox direction to column for proper content on these pages. */
 .my-main-home,
 .my-main-error {
   flex-direction: column;
   max-width: 500px;
   padding: 0 1rem;
-  /* A common readability setting */
   line-height: var(--line-height-for-readability);
 }
 
+/* Flexbox for centering again. */
 .my-contact-center-element{
   display: flex;
   justify-content: center;
@@ -353,6 +356,7 @@ body {
   transform: translate(0.35rem, -0.35rem)
 }
 
+/* Grid for displaying the projects in the projects page. */
 .my-projects {
   display: grid;
   grid-template-columns: 1fr;
@@ -363,6 +367,7 @@ body {
   margin: 0 auto;
 }
 
+/* Responsive grid. */
 @media (min-width: 48.75em) {
   .my-projects {
     grid-template-columns: repeat(2, 1fr);
