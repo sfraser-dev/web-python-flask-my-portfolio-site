@@ -17,25 +17,33 @@ def create_app():
             "name": "Drum Set",
             "thumb": "images/drum-wee.png",
             "hero": "images/drum-hero.png",
-            "categories": ["HTML", "CSS", "JS"],
+            "categories": ["HTML", "CSS", "JavaScript"],
             "slug": "drum-set",
-            "prod": "https://sfraser-microblog.onrender.com",
+            "production": "https://sfraser-microblog.onrender.com",
         },
         {
             "name": "Dice Game",
             "thumb": "images/dice-wee.png",
             "hero": "images/dice-hero.png",
-            "categories": ["HTML", "CSS", "JS"],
+            "categories": ["HTML", "CSS", "JavaScript"],
             "slug": "dice-game",
-            "prod": "https://sfraser-microblog.onrender.com",
+            "production": "https://sfraser-microblog.onrender.com",
         },
         {
             "name": "Memory Game",
             "thumb": "images/memory-wee.png",
             "hero": "images/memory-hero.png",
-            "categories": ["HTML", "CSS", "JS"],
+            "categories": ["HTML", "CSS", "JavaScript"],
             "slug": "memory-game",
-            "prod": "https://sfraser-microblog.onrender.com",
+            "production": "https://sfraser-microblog.onrender.com",
+        },
+        {
+            "name": "Microblog",
+            "thumb": "images/dice-wee.png",
+            "hero": "images/dice-hero.png",
+            "categories": ["Python", "Flask", "MongoDB"],
+            "slug": "microblog",
+            "production": "https://sfraser-microblog.onrender.com",
         },
     ]
 
@@ -65,30 +73,33 @@ def create_app():
     #   }
     # }
 
-    # Projects endpoint.
+    # Projects endpoint creation.
     # Note url_for('projects_page') returns URL "/projects/" as def is projects_page())
     @app.route("/projects/")
     def projects_page():
         return render_template("projects.html", projects=projects)
 
-    # About endpoint.
+    # Home endpoint creation.
     @app.route("/")
     def home():
         return render_template("home.html")
 
-    # Contact endpoint.
+    # Contact endpoint creation.
     @app.route("/contact/")
     def contact():
         return render_template("contact.html")
 
-    # Project/project-name slug endpoints.
+    # Project/project-name slug endpoint creations.
     # <string:slug> is a route with a variable for the URL (variable slug as a string).
+    # For example: 127.0.0.1:550/projects/dice-game
     @app.route("/projects/<string:slug>")
     def project(slug):
         # User has input an URL we don't recognise - give 404 error.
         if slug not in slug_to_project:
             abort(404)
-        # URL is recognised so render template using the project dictionary
+        # URL is recognised so render template using the project dictionary.
+        # So if the slug is "dice-game", the dictionary for "dice-game" will be passed
+        # as an argument to render_template (obtained from the slug_to_project mapping).
         return render_template(f"project-{slug}.html", project=slug_to_project[slug])
 
     # Errorhandler endpoint decorator. Run this when flask aborts with a 404 response.
@@ -104,5 +115,4 @@ def create_app():
     # Flask app factory.
     return app      
 
-# handle 500 error?
 # 400 errors if handling form data
