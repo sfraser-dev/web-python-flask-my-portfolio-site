@@ -2,15 +2,15 @@
 
 <!-- The body for the memory-game project. -->
 {% block content %}
-<main class="main main--project">
+<main class="my-main">
     <div>
-        <img class="hero"
+        <img class="my-project-hero"
         src="{{ url_for('static', filename=project['hero']) }}"
-        alt="hero image for the dice game">
+        alt="hero image">
 
-        <article class="project">
-            <article class="project__content">
-                <h2 class="project__heading">
+        <article class="my-project">
+            <article class="my-project-content">
+                <h2 class="my-project-heading">
                     {{ project['name'] }}
                 </h2>
 
