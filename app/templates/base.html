@@ -5,47 +5,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Doe</title>
+    <title>Stewart Fraser</title>
 
-
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"> -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/w3.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
-    <header class="header">
-        <!-- Navbar (nav__link--active class applies to the current page only) -->
-        <!-- url_for(contact) is the url in the @app.route decorator for the contact() function -->
-        <!-- <nav class="nav">
-            <a href="{{ url_for('home') }}"
-                class="nav__link {{ 'nav__link--active' if request.path == url_for('home') }}">Home</a>
-            <a href="{{ url_for('projects_page') }}"
-                class="nav__link {{ 'nav__link--active' if request.path == url_for('projects_page') }}">
-                Projects</a>
-            <a href="{{ url_for('contact') }}"
-                class="nav__link {{ 'nav__link--active' if request.path == url_for('contact') }}">Contact</a>
-        </nav> -->
+    <header class="w3-container">
+        <nav class="w3-bar w3-black w3-card-4 w3-round">
+            <!-- Make the active link white and non-active links gray. -->
+            <!-- Don't underline active white link on hover. -->
+            <!-- Do underline non-active gray links on hover. -->
+            {% if request.path == url_for('home') %}
+                <a href="{{ url_for('home') }}" class="w3-text-gray w3-bar-item w3-padding-16 
+                my-navlink-active">Home</a>
+            {% else %}
+                <a href="{{ url_for('home') }}" class="w3-text-gray w3-bar-item w3-padding-16
+                my-navlink-inactive">Home</a>
+            {% endif %}
 
-        <div class="w3-top">
-            <div class="w3-bar w3-black w3-card-4">
-              <a href="{{ url_for('home') }}" class="w3-text-gray w3-bar-item w3-padding-large my-navlink
-              {{ 'my-navlink-active' if request.path == url_for('home') }}">Home</a>
-              <a href="{{ url_for('projects_page') }}" class="w3-text-gray w3-bar-item w3-padding-large my-navlink
-              {{ 'my-navlink-active' if request.path == url_for('projects_page') }}">Projects</a>
-              <a href="{{ url_for('contact') }}" class="w3-text-gray w3-bar-item w3-padding-large my-navlink
-              {{ 'my-navlink-active' if request.path == url_for('contact') }}">Contact</a>
-            </div>
-          </div>
+            {% if request.path == url_for('projects_page') %}
+                <a href="{{ url_for('projects_page') }}" class="w3-text-gray w3-bar-item w3-padding-16
+                my-navlink-active">Projects</a>
+            {% else %}
+                <a href="{{ url_for('projects_page') }}" class="w3-text-gray w3-bar-item w3-padding-16
+                my-navlink-inactive">Projects</a>
+            {% endif %}
 
-        <h1>John Doe</h1>
+            {% if request.path == url_for('contact') %}
+                <a href="{{ url_for('contact') }}" class="w3-text-gray w3-bar-item w3-padding-16
+                my-navlink-active">Contact</a>
+            {% else %}
+                <a href="{{ url_for('contact') }}" class="w3-text-gray w3-bar-item w3-padding-16
+                my-navlink-inactive">Contact</a>
+            {% endif %}
+
+        </nav>
+
+        <div class="w3-container w3-center w3-margin-top">
+            <h1>Stewart Fraser</h1>
+        </div>
 
     </header>
     <!-- Files that extend base.html put their "block content" here (their bodies) -->
     {% block content %}
     {% endblock %}
 
-    <!-- <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script> -->
+    <script src="https://kit.fontawesome.com/316af999ed.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

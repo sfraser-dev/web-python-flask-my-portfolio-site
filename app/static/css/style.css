@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  margin-top: 80px;
+  margin-top: 20px;
 }
 
 .header {
@@ -265,14 +265,40 @@ body {
 
 
 /****************************/
-.my-navlink {
+.my-navlink-inactive {
   text-decoration: none;
 }
 
-.my-navlink:hover {
+.my-navlink-inactive:hover {
   text-decoration: underline;
 }
 
 .my-navlink-active {
+  /* w3.css needs "!important" to override its colors */
   color: white!important;
+  text-decoration: none;
+}
+
+.my-center-element{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.my-contacts {
+  margin-top: 25px;
+}
+
+.my-contact {
+  font-size: 1.25rem;
+  margin: 15px 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.my-contact:hover {
+  transform: translateY(-0.25rem);
+}
+
+.my-contact-link {
+  text-decoration: none;
 }
