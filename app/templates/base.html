@@ -18,29 +18,28 @@
             <!-- Don't underline active white link on hover. -->
             <!-- Do underline non-active gray links on hover. -->
             {% if request.path == url_for('home') %}
-                <a href="{{ url_for('home') }}" class="w3-text-gray w3-bar-item w3-padding-16 
+            <a href="{{ url_for('home') }}" class="w3-text-gray w3-bar-item w3-padding-16 
                 my-nav-link-active">Home</a>
             {% else %}
-                <a href="{{ url_for('home') }}" class="w3-text-gray w3-bar-item w3-padding-16
+            <a href="{{ url_for('home') }}" class="w3-text-gray w3-bar-item w3-padding-16
                 my-nav-link-inactive">Home</a>
             {% endif %}
 
             {% if request.path == url_for('projects_page') %}
-                <a href="{{ url_for('projects_page') }}" class="w3-text-gray w3-bar-item w3-padding-16
+            <a href="{{ url_for('projects_page') }}" class="w3-text-gray w3-bar-item w3-padding-16
                 my-nav-link-active">Projects</a>
             {% else %}
-                <a href="{{ url_for('projects_page') }}" class="w3-text-gray w3-bar-item w3-padding-16
+            <a href="{{ url_for('projects_page') }}" class="w3-text-gray w3-bar-item w3-padding-16
                 my-nav-link-inactive">Projects</a>
             {% endif %}
 
             {% if request.path == url_for('contact') %}
-                <a href="{{ url_for('contact') }}" class="w3-text-gray w3-bar-item w3-padding-16
+            <a href="{{ url_for('contact') }}" class="w3-text-gray w3-bar-item w3-padding-16
                 my-nav-link-active">Contact</a>
             {% else %}
-                <a href="{{ url_for('contact') }}" class="w3-text-gray w3-bar-item w3-padding-16
+            <a href="{{ url_for('contact') }}" class="w3-text-gray w3-bar-item w3-padding-16
                 my-nav-link-inactive">Contact</a>
             {% endif %}
-
         </nav>
 
         <div class="w3-container w3-margin-top w3-margin-bottom">
@@ -48,7 +47,7 @@
         </div>
 
     </header>
-    <!-- Files that extend base.html put their "block content" here (their bodies) -->
+    <!-- Files that extend base.html put their content here -->
     {% block content %}
     {% endblock %}
 

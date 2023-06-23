@@ -6,31 +6,31 @@
     <div class="w3-row">
         <div class="w3-col m6">
             <div class="w3-container">
-                <article class="m6 my-project">
-                    <img class="my-project-hero w3-margin-bottom" src="{{ url_for('static', filename=project['hero']) }}"
+                <article class="my-project">
+                    <!-- w3-section is 16px margin to top and bottom -->
+                    <img class="my-project-hero w3-section" src="{{ url_for('static', filename=project['hero']) }}"
                         alt="hero image">
                 </article>
             </div>
         </div>
         <div class="w3-col m6">
-            <div class="w3-container">
-                <article class="my-project-content">
-                    <h2 class="my-project-heading">
-                        {{ project['name'] }}
-                    </h2>
-                    <p>
-                        <a href="{{ project['production'] }}" target="_blank" rel="noopener noreferrer">
-                            <span class="w3-tag w3-round w3-green">View in production</span></a>
-                    </p>
-                    <p>
-                        <!-- To do: Could add a text description in the project's dictionary and
+            <article class="w3-container">
+                <h2 class="my-project-heading">
+                    {{ project['name'] }}
+                </h2>
+                <p>
+                    <a href="{{ project['production'] }}" target="_blank" rel="noopener noreferrer">
+                        <span class="w3-tag w3-round w3-green w3-large my-project-production-tag">View in
+                            production</span></a>
+                </p>
+                <p>
+                    <!-- To do: Could add a text description in the project's dictionary and
                     use that here instead of manually putting it in a new HTML file that
                     is extending this HTML file. -->
-                        {% block project_info %}
-                        {% endblock %}
-                    </p>
-                </article>
-            </div>
+                    {% block project_info %}
+                    {% endblock %}
+                </p>
+            </article>
         </div>
     </div>
 </main>
