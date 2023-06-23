@@ -19,7 +19,7 @@ def create_app():
             "hero": "images/drum-hero.png",
             "categories": ["HTML", "CSS", "JavaScript"],
             "slug": "drum-set",
-            "production": "https://sfraser-microblog.onrender.com",
+            "production": "https://koalatreehotel.github.io/web-portfolio-drum-set/",
         },
         {
             "name": "Dice Game",
@@ -27,7 +27,7 @@ def create_app():
             "hero": "images/dice-hero.png",
             "categories": ["HTML", "CSS", "JavaScript"],
             "slug": "dice-game",
-            "production": "https://sfraser-microblog.onrender.com",
+            "production": "https://koalatreehotel.github.io/web-portfolio-dice-game/",
         },
         {
             "name": "Memory Game",
@@ -35,7 +35,7 @@ def create_app():
             "hero": "images/memory-hero.png",
             "categories": ["HTML", "CSS", "JavaScript"],
             "slug": "memory-game",
-            "production": "https://sfraser-microblog.onrender.com",
+            "production": "https://koalatreehotel.github.io/web-portfolio-memory-game/",
         },
         {
             "name": "Microblog",

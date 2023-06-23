@@ -1,32 +1,12 @@
-{% extends "base.html" %}
+{% extends "project-base.html" %}
 
-<!-- The body for the project. -->
-{% block content %}
-<main class="my-main-flex-centering">
-    <div>
-        <img class="my-project-hero" src="{{ url_for('static', filename=project['hero']) }}" alt="hero image">
-
-        <article class="my-project">
-            <article class="my-project-content">
-                <h2 class="my-project-heading">
-                    {{ project['name'] }}
-                </h2>
-                <p><button class="w3-button w3-green w3-round" type="button">
-                    View in production</button></p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio architecto minima saepe, maxime
-                    voluptatibus modi ea veritatis nulla dignissimos natus blanditiis eaque incidunt provident ducimus
-                    fugiat ipsum accusamus! Nulla incidunt maiores inventore doloribus blanditiis dolores veniam totam
-                    hic vitae quos.
-                </p>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias inventore magnam sint ab nobis
-                    architecto labore, officiis, incidunt harum tempore eaque exercitationem, ducimus animi accusamus
-                    earum distinctio commodi. Voluptatem, minima.
-                </p>
-            </article>
-
-        </article>
-    </div>
-</main>
+{% block project_info %}
+<p>
+Copy the pattern generated. The more you correctly match the pattern, the longer the pattern gets.
+</p>
+Technologies used:
+<div class="w3-tag w3-round w3-white my-projects-technologies-tag">HTML</div>
+<div class="w3-tag w3-round w3-white my-projects-technologies-tag">CSS / SASS</div>
+<div class="w3-tag w3-round w3-white my-projects-technologies-tag">jQuery</div>
+<div class="w3-tag w3-round w3-white my-projects-technologies-tag">JavaScript</div>
 {% endblock %}
