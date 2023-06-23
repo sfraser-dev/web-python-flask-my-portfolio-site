@@ -3,8 +3,7 @@
 <!-- Projects shown in a css grid via a for loop. -->
 <!-- Projects are described via a common dictionary format detailed in __init__.py. -->
 {% block content %}
-<main class="my-main-flex-centering">
-
+<main class="w3-panel">
     <section class="my-projects">
         {% for project in projects %}
         <!-- Use the class to remove the default link text decoration. -->
@@ -23,7 +22,6 @@
                 </header>
             </article>
         </a>
-
         {% endfor %}
     </section>
 </main>

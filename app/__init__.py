@@ -111,6 +111,10 @@ def create_app():
     @app.errorhandler(500)
     def internal_server_error(error):
         return render_template("500.html"), 500
+    # # A 500 endpoint to test 500 error handling (via /500).
+    # @app.route("/500")
+    # def error500():
+    #     abort(500)
 
     # Flask app factory.
     return app      

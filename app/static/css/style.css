@@ -7,7 +7,6 @@
 
 /***** VARIABLES. *****/
 :root {
-  --max-width-for-reading-column: 800px;
   /* A common readability setting */
   --line-height-for-readability: 150%;
 }
@@ -35,31 +34,15 @@ body {
   text-decoration: none;
 }
 
-/***** Making "main" elements FLEXBOX CENTERED containers *****/
-.my-main-flex-centering {
-  display: flex;
-  flex-direction: row;
-  justify-content: center; 
-  /* Make elements with width defined sit centrally in parent's 
-  container. Auto means browser will determine left & right
-  margins (and it sets them equal) */
-  margin: 0 auto; 
-}
-
-/* Flexbox direction to column for proper content on these specific pages. */
-.my-main-home-page,
-.my-main-error-page,
-.my-contact-page {
-  flex-direction: column;
-  max-width: var(--max-width-for-reading-column);
-  padding: 0 15px;
+/***** The HOME PAGE styling. *****/
+.my-home-page {
   line-height: var(--line-height-for-readability);
 }
 
 /***** The CONTACT PAGE styling. *****/
 .my-contact {
-  font-size: 1.5rem;
-  margin-top: 50px;
+  font-size: 1.25rem;
+  margin-bottom: 30px;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -71,7 +54,7 @@ body {
   text-decoration: none;
 }
 
-/***** The PROJECTS PAGE a collection of projects in a grid. *****/
+/***** The PROJECTS PAGE, a collection of projects in a CSS grid. *****/
 .my-projects-technologies-tag {
   font-size: 0.9rem;
   font-weight: 500;
@@ -107,14 +90,13 @@ body {
   transform: translate(6px, -6px)
 }
 
-/* Grid for displaying all the collection of projects. */
+/* CSS Grid for displaying the collection of projects. */
 .my-projects {
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 20px;
   justify-content: center;
   justify-items: center;
-  max-width: 350px;
   margin: 0 auto;
 }
 
@@ -133,22 +115,13 @@ body {
 }
 
 /***** Individual PROJECT PAGES. *****/
-.my-project {
-  font-size: 1.2rem;
-  max-width: var(--max-width-for-reading-column);
-  padding: 0 16px;
-}
-
 .my-project-hero {
   width: 100%;
-  max-width: var(--max-width-for-reading-column);
-  margin-top: 35px;
-  margin-bottom: 25px;
 }
 
 .my-project-heading {
   margin: 0;
-  font-size: 2rem;
+  font-size: 1.75rem;
   line-height: var(--line-height-for-readability);
 }
 
