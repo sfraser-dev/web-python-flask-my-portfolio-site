@@ -20,7 +20,7 @@ body {
   margin-top: 20px;
 }
 
-/***** BASE PAGE, navbar and title. *****/
+/***** BASE PAGE (navbar and title). *****/
 .my-base-nav-link-inactive {
   text-decoration: none;
 }
@@ -63,16 +63,6 @@ body {
 
 /***** PROJECTS (plural) PAGE *****/
 /* This page displays all of the projects together in a grid. */
-.my-projects-technologies-tag {
-  font-size: 0.9rem;
-  font-weight: 500;
-  padding: 3px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #0e0e0e;
-  margin-bottom: 5px;
-}
-
 .my-projects-card {
   padding-bottom: 0.5rem;
   margin: 16px 0 12px;
@@ -121,6 +111,18 @@ body {
     grid-template-columns: repeat(3, 1fr);
     max-width: 1080px;
   }
+}
+
+/***** MULTI-USE. *****/
+/* Class used in PROJECT and PROJECTS pages. */
+.my-shared-technologies-tag {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 3px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #0e0e0e;
+  margin-bottom: 5px;
 }
 
 /***** PROJECT (singular) PAGE. *****/
