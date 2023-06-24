@@ -65,6 +65,10 @@ body {
 
 /***** PROJECTS (plural) PAGE *****/
 /* This page displays all of the projects together in a grid. */
+.my-projects-base-container {
+  max-width: 992px;
+}
+
 .my-projects-card {
   padding-bottom: 0.5rem;
   margin: 16px 0 12px;
