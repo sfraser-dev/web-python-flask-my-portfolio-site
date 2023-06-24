@@ -44,6 +44,8 @@ body {
 /***** HOME PAGE. *****/
 .my-home-page {
   line-height: var(--line-height-for-readability);
+  /* Limit to max size of w3.css small screen size. */
+  max-width: 600px;
 }
 
 /***** CONTACT PAGE. *****/
