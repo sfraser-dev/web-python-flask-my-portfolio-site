@@ -2,17 +2,19 @@
 
 <!-- The body for the project. -->
 {% block content %}
-<main class="w3-container">
+<main class="w3-container my-project-base-container">
     <div class="w3-row">
+
         <div class="w3-col m6">
-            <div class="w3-container">
+            <div class="w3-container my-project-base-hero-image-container">
                 <!-- w3-section is 16px margin to top and bottom -->
-                <img class="my-project-base-hero w3-section" src="{{ url_for('static', filename=project['hero']) }}"
+                <img class="my-project-base-hero-image w3-section" src="{{ url_for('static', filename=project['hero']) }}"
                     alt="hero image">
             </div>
         </div>
+
         <div class="w3-col m6">
-            <article class="w3-container">
+            <article class="w3-container my-project-base-written-content-container">
                 <h2 class="my-project-base-title">
                     {{ project['name'] }}
                 </h2>
@@ -25,11 +27,12 @@
                     <!-- To do: Could add a text description in the project's dictionary and
                     use that here instead of manually putting it in a new HTML file that
                     is extending this HTML file. -->
-                    {% block project_info %}
+                    {% block project_written_content %}
                     {% endblock %}
                 </p>
             </article>
         </div>
+
     </div>
 </main>
 {% endblock %}

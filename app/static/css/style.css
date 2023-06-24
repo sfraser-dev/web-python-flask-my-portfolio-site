@@ -29,7 +29,7 @@ body {
   text-decoration: underline;
 }
 
-/* Need to use !important to override w3css colors */
+/* Need to use !important to override w3.css colors */
 .my-base-nav-link-active {
   color: white!important;
   text-decoration: none;
@@ -91,30 +91,6 @@ body {
   transform: translate(6px, -6px)
 }
 
-/* CSS Grid for displaying the collection of projects. */
-.my-projects {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-column-gap: 20px;
-  justify-content: center;
-  justify-items: center;
-  margin: 0 auto;
-}
-
-/* Responsive grid for the collection of projects page. */
-@media (min-width: 780px) {
-  .my-projects {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 720px;
-  }
-}
-@media (min-width: 1120px) {
-  .my-projects {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 1080px;
-  }
-}
-
 /***** MULTI-USE. *****/
 /* Class used in PROJECT and PROJECTS pages. */
 .my-shared-technologies-tag {
@@ -128,13 +104,21 @@ body {
 }
 
 /***** PROJECT (singular) PAGE. *****/
-/* These are the stand-alone project pages detailing each project. */
-.my-project-base-hero {
-  width: 100%;
-}
-
+/* These are the pages detailing each stand-alone project. */
 .my-project-base-title {
   font-size: 1.5rem; 
+}
+
+/* Limit the width that a project page can reach (w3.css medium). */
+.my-project-base-container {
+  max-width: 992px;
+}
+
+/* Make the hero image scale while maintaining aspect ratio. */
+/* Limit the hero image's width to that of its container.  */
+.my-project-base-hero-image {
+  max-width: 100%;
+  height: auto; 
 }
 
 /* Animatioin for "view in production" tag. */
