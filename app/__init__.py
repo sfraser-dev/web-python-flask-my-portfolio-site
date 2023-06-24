@@ -102,16 +102,16 @@ def create_app():
         # as an argument to render_template (obtained from the slug_to_project mapping).
         return render_template(f"project-{slug}.html", project=slug_to_project[slug])
 
-    # Errorhandler endpoint decorator. Run this when flask aborts with a 404 response.
+    # Errorhandler endpoint creation. Run this when flask aborts with a 404 response.
     @app.errorhandler(404)
     def page_not_found(error):
         return render_template("404.html"), 404
 
-    # Errorhandler endpoint decorator. Run this when flask aborts with a 500 response.
+    # Errorhandler endpoint creation. Run this when flask aborts with a 500 response.
     @app.errorhandler(500)
     def internal_server_error(error):
         return render_template("500.html"), 500
-    # # A 500 endpoint to test 500 error handling (via /500).
+    # # A 500 endpoint to test 500 error handling (via typing of 127.0.0.1:5500/500).
     # @app.route("/500")
     # def error500():
     #     abort(500)
