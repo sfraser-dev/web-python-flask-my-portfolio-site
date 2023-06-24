@@ -31,7 +31,7 @@ body {
 
 /* Need to use !important to override w3.css colors */
 .my-base-nav-link-active {
-  color: white!important;
+  color: white !important;
   text-decoration: none;
 }
 
@@ -106,7 +106,7 @@ body {
 /***** PROJECT (singular) PAGE. *****/
 /* These are the pages detailing each stand-alone project. */
 .my-project-base-title {
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
 }
 
 /* Limit the width that a project page can reach (w3.css medium). */
@@ -118,7 +118,7 @@ body {
 /* Limit the hero image's width to that of its container.  */
 .my-project-base-hero-image {
   max-width: 100%;
-  height: auto; 
+  height: auto;
 }
 
 /* Animatioin for "view in production" tag. */
@@ -128,4 +128,14 @@ body {
 
 .my-project-base-production-tag:hover {
   transform: translate(4px, -4px);
+}
+
+/***** W3-MOBILE adapted implementation. *****/
+/* Implement a version of "w3-mobile" on screen sizes of 0px to 310px */
+@media only screen and (max-width: 310px) {
+  .my-w3-mobile {
+    display: block;
+    width: 100% !important;
+    text-align: center;
+  }
 }

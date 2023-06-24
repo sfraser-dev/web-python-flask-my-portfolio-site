@@ -19,26 +19,26 @@
             <!-- Do underline non-active gray links on hover. -->
             {% if request.path == url_for('home') %}
             <a href="{{ url_for('home') }}" class="w3-text-gray w3-bar-item w3-padding-16 
-                my-base-nav-link-active w3-mobile">Home</a>
+                my-base-nav-link-active my-w3-mobile">Home</a>
             {% else %}
             <a href="{{ url_for('home') }}" class="w3-text-gray w3-bar-item w3-padding-16
-                my-base-nav-link-inactive w3-mobile">Home</a>
+                my-base-nav-link-inactive my-w3-mobile">Home</a>
             {% endif %}
 
             {% if request.path == url_for('projects_page') %}
             <a href="{{ url_for('projects_page') }}" class="w3-text-gray w3-bar-item w3-padding-16
-                my-base-nav-link-active w3-mobile">Projects</a>
+                my-base-nav-link-active my-w3-mobile">Projects</a>
             {% else %}
             <a href="{{ url_for('projects_page') }}" class="w3-text-gray w3-bar-item w3-padding-16
-                my-base-nav-link-inactive w3-mobile">Projects</a>
+                my-base-nav-link-inactive my-w3-mobile">Projects</a>
             {% endif %}
 
             {% if request.path == url_for('contact') %}
             <a href="{{ url_for('contact') }}" class="w3-text-gray w3-bar-item w3-padding-16
-                my-base-nav-link-active w3-mobile">Contact</a>
+                my-base-nav-link-active my-w3-mobile">Contact</a>
             {% else %}
             <a href="{{ url_for('contact') }}" class="w3-text-gray w3-bar-item w3-padding-16
-                my-base-nav-link-inactive w3-mobile">Contact</a>
+                my-base-nav-link-inactive my-w3-mobile">Contact</a>
             {% endif %}
         </nav>
 
