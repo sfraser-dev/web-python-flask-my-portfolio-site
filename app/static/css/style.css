@@ -178,8 +178,3 @@ body {
   }
 }
 
-/***** W3.CSS ADAPTION: Custom breakpoint. ****/
-/* Custom breakpoint (my-msX) in w3.css grid between
-medium and small. Need to include the w3.css grid MQs
-(for the breakpoints greater than custom breakpoint)
-AFTERWARDS so they still take priority. */
