@@ -42,10 +42,10 @@ body {
 }
 
 /***** HOME PAGE. *****/
-.my-home-page {
-  line-height: var(--line-height-for-readability);
+.my-home-page-limit-width {
   /* Limit to max size of w3.css small screen size. */
   max-width: 600px;
+  line-height: var(--line-height-for-readability);
 }
 
 /***** CONTACT PAGE. *****/
@@ -65,7 +65,7 @@ body {
 
 /***** PROJECTS (plural) PAGE *****/
 /* This page displays all of the projects together in a grid. */
-.my-projects-base-container {
+.my-projects-base-container-limit-width {
   max-width: 992px;
 }
 
@@ -114,13 +114,13 @@ body {
 }
 
 /* Limit the width that a project page can reach (w3.css medium). */
-.my-project-base-container {
+.my-project-base-container-limit-width {
   max-width: 992px;
 }
 
 /* Make the hero image scale while maintaining aspect ratio. */
 /* Limit the hero image's width to that of its container.  */
-.my-project-base-hero-image {
+.my-project-base-hero-image-limit-width {
   max-width: 100%;
   height: auto;
 }

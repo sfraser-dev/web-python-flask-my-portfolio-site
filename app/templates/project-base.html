@@ -2,19 +2,19 @@
 
 <!-- The body for the project. -->
 {% block content %}
-<main class="w3-container my-project-base-container">
+<main class="w3-container my-project-base-container-limit-width">
     <div class="w3-row">
 
         <div class="w3-col m6">
-            <div class="w3-container my-project-base-hero-image-container">
+            <div class="w3-container">
                 <!-- w3-section is 16px margin to top and bottom -->
-                <img class="my-project-base-hero-image w3-section" src="{{ url_for('static', filename=project['hero']) }}"
+                <img class="my-project-base-hero-image-limit-width w3-section" src="{{ url_for('static', filename=project['hero']) }}"
                     alt="hero image">
             </div>
         </div>
 
         <div class="w3-col m6">
-            <article class="w3-container my-project-base-written-content-container">
+            <article class="w3-container">
                 <h2 class="my-project-base-title">
                     {{ project['name'] }}
                 </h2>
