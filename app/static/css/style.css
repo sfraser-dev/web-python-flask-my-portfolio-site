@@ -138,6 +138,18 @@ body {
   transform: translate(4px, -4px);
 }
 
+.my-project-microblog-diagram {
+  /* Auto-rescale the image. */
+  width: 100%;
+  height: auto;
+  /* Center the image. */
+  margin: 0 auto;
+  display: block; 
+  /* Set max width and height. */
+  max-width: 340px;
+  max-height: 424px;
+}
+
 /***** MQ BREAKPOINTS *****/
 @media only screen and (min-width: 993px) {
   /* Page width limit for the grid of projects. */
