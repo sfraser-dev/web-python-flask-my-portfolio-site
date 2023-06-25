@@ -2,10 +2,10 @@
 
 <!-- The body for the project. -->
 {% block content %}
-<main class="w3-container my-project-base-container-limit-width">
+<main class="w3-container my-project-base-container my-project-base-container-limit-width">
     <div class="w3-row">
 
-        <div class="w3-col m6">
+        <div class="w3-col l6">
             <div class="w3-container">
                 <!-- w3-section is 16px margin to top and bottom -->
                 <img class="my-project-base-hero-image-limit-width w3-section" src="{{ url_for('static', filename=project['hero']) }}"
@@ -13,14 +13,14 @@
             </div>
         </div>
 
-        <div class="w3-col m6">
+        <div class="w3-col l6">
             <article class="w3-container">
                 <h2 class="my-project-base-title">
                     {{ project['name'] }}
                 </h2>
                 <p>
                     <a href="{{ project['production'] }}" target="_blank" rel="noopener noreferrer">
-                        <span class="w3-tag w3-round w3-green w3-large my-project-base-production-tag">View in
+                        <span class="w3-tag w3-round w3-green my-project-base-view-production-tag">View in
                             production</span></a>
                 </p>
                 <p>

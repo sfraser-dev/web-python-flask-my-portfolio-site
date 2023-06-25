@@ -35,10 +35,9 @@ body {
   text-decoration: none;
 }
 
-.my-base-title {
+.my-base-title-header {
   text-decoration: underline;
   text-underline-offset: 5px;
-
 }
 
 /***** HOME PAGE. *****/
@@ -49,13 +48,13 @@ body {
 }
 
 /***** CONTACT PAGE. *****/
-.my-contact {
+.my-contact-container {
   font-size: 1.25rem;
   margin-bottom: 30px;
   transition: transform 0.2s ease-in-out;
 }
 
-.my-contact:hover {
+.my-contact-container:hover {
   transform: translate(4px, -4px);
 }
 
@@ -65,7 +64,7 @@ body {
 
 /***** PROJECTS (plural) PAGE *****/
 /* This page displays all of the projects together in a grid. */
-.my-projects-base-container-limit-width {
+.my-projects-container-limit-width {
   /* Increased to 1200px at MQ-993px */
   max-width: 600px;
 }
@@ -117,9 +116,9 @@ body {
   font-size: 1.5rem;
 }
 
-/* Limit the width that a project page can reach (w3.css medium). */
+/* Limit the width that a project page can reach. */
 .my-project-base-container-limit-width {
-  max-width: 992px;
+  max-width: 550px;
 }
 
 /* Make the hero image scale while maintaining aspect ratio. */
@@ -130,39 +129,57 @@ body {
 }
 
 /* Animatioin for "view in production" tag. */
-.my-project-base-production-tag {
+.my-project-base-view-production-tag {
+  font-size: 18px;
   transition: transform 0.2s ease-in-out;
 }
 
-.my-project-base-production-tag:hover {
+.my-project-base-view-production-tag:hover {
   transform: translate(4px, -4px);
 }
 
 /***** MQ BREAKPOINTS *****/
 @media only screen and (min-width: 993px) {
-  .my-projects-base-container-limit-width {
+  /* Page width limit for the grid of projects. */
+  .my-projects-container-limit-width {
+    max-width: 1200px;
+  }
+  /* Page width limit for individual project description pages. */
+  .my-project-base-container-limit-width {
     max-width: 1200px;
   }
 }
 
-/***** W3.CSS ADAPTION: w3-mobile implementation up to 310px breakpoint only. *****/
-/* Implement a version of "w3-mobile" on screen sizes of 0px to 310px */
+/***** Handle tiny screens less than 311px. *****/
 @media only screen and (max-width: 310px) {
+
+  /* W3.CSS ADAPTION: Implement a version of "w3-mobile"
+     on screen sizes of 0px to 310px */
   .my-w3-mobile {
     display: block;
     width: 100% !important;
     text-align: center;
   }
+
+  .my-base-title-header {
+    font-size: 1.5rem;
+  }
+
+  .my-contact-container {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .my-home-page-container,
+  .my-project-base-container,
+  .my-project-base-view-production-tag,
+  .my-shared-technologies-tag {
+    font-size: 0.75rem;
+  }
 }
 
-/***** W3.CSS ADAPTION: Custom breakpoint (my-msX) in w3.css grid between medium and small. *****/
-/* Need to include the w3.css grid MQs (for the breakpoints greater than custom breakpoint) AFTERWARDS so they still take priority. */
-@media (min-width:550px){.w3-col.my-ms1{width:8.33333%}.w3-col.my-ms2{width:16.66666%}.w3-col.my-ms3{width:24.99999%}.w3-col.my-ms4{width:33.33333%}
-.w3-col.my-ms5{width:41.66666%}.w3-col.my-ms6{width:49.99999%}.w3-col.my-ms7{width:58.33333%}.w3-col.my-ms8{width:66.66666%}
-.w3-col.my-ms9{width:74.99999%}.w3-col.my-ms10{width:83.33333%}.w3-col.my-ms11{width:91.66666%}.w3-col.my-ms12{width:99.99999%}}
-@media (min-width:601px){.w3-col.m1{width:8.33333%}.w3-col.m2{width:16.66666%}.w3-col.m3,.w3-quarter{width:24.99999%}.w3-col.m4,.w3-third{width:33.33333%}
-.w3-col.m5{width:41.66666%}.w3-col.m6,.w3-half{width:49.99999%}.w3-col.m7{width:58.33333%}.w3-col.m8,.w3-twothird{width:66.66666%}
-.w3-col.m9,.w3-threequarter{width:74.99999%}.w3-col.m10{width:83.33333%}.w3-col.m11{width:91.66666%}.w3-col.m12{width:99.99999%}}
-@media (min-width:993px){.w3-col.l1{width:8.33333%}.w3-col.l2{width:16.66666%}.w3-col.l3{width:24.99999%}.w3-col.l4{width:33.33333%}
-.w3-col.l5{width:41.66666%}.w3-col.l6{width:49.99999%}.w3-col.l7{width:58.33333%}.w3-col.l8{width:66.66666%}
-.w3-col.l9{width:74.99999%}.w3-col.l10{width:83.33333%}.w3-col.l11{width:91.66666%}.w3-col.l12{width:99.99999%}}
+/***** W3.CSS ADAPTION: Custom breakpoint. ****/
+/* Custom breakpoint (my-msX) in w3.css grid between
+medium and small. Need to include the w3.css grid MQs
+(for the breakpoints greater than custom breakpoint)
+AFTERWARDS so they still take priority. */
