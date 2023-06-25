@@ -6,13 +6,14 @@
 <main class="w3-panel my-projects-base-container-limit-width">
     <section class="w3-row-padding">
         {% for project in projects %}
+
         <!-- Responsive w3.css grid. -->
-        <div class="w3-col l3 m4 s12 w3-center">
+        <div class="w3-col l3 my-ms6 s12 w3-center">
 
             <!-- Use the class to remove the default link text decoration. -->
             <a class="my-projects-card-link" href="{{ url_for('project', slug=project['slug']) }}">
                 <!-- The card (which is fully within an anchor tag - entirely clickable). -->
-                <article class="w3-card-4 w3-light-gray w3-center my-projects-card">
+                <article class="w3-card-4 w3-light-gray w3-center my-projects-card my-projects-card-limit-width">
                     <!-- The name of this project. -->
                     <h2 class="my-projects-card-title">{{ project["name"] }}</h2>
                     <img class="my-projects-card-image" src="{{ url_for('static', filename=project['thumb']) }}"

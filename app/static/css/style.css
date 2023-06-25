@@ -66,13 +66,17 @@ body {
 /***** PROJECTS (plural) PAGE *****/
 /* This page displays all of the projects together in a grid. */
 .my-projects-base-container-limit-width {
-  max-width: 992px;
+  /* Increased to 1200px at MQ-993px */
+  max-width: 600px;
 }
 
 .my-projects-card {
   padding-bottom: 0.5rem;
   margin: 16px 0 12px;
   transition: transform 0.2s ease-in-out;
+}
+
+.my-projects-card-limit-width {
   max-width: 250px;
 }
 
@@ -134,7 +138,14 @@ body {
   transform: translate(4px, -4px);
 }
 
-/***** W3-MOBILE adapted implementation. *****/
+/***** MQ BREAKPOINTS *****/
+@media only screen and (min-width: 993px) {
+  .my-projects-base-container-limit-width {
+    max-width: 1200px;
+  }
+}
+
+/***** W3.CSS ADAPTION: w3-mobile implementation up to 310px breakpoint only. *****/
 /* Implement a version of "w3-mobile" on screen sizes of 0px to 310px */
 @media only screen and (max-width: 310px) {
   .my-w3-mobile {
@@ -143,3 +154,18 @@ body {
     text-align: center;
   }
 }
+
+/***** W3.CSS ADAPTION: Custom breakpoint (my-msX) in w3.css grid between medium and small. *****/
+/* Need to include the w3.css grid MQs (for the breakpoints greater than custom breakpoint) AFTERWARDS so they still take priority. */
+.w3-col.s1{width:8.33333%}.w3-col.s2{width:16.66666%}.w3-col.s3{width:24.99999%}.w3-col.s4{width:33.33333%}
+.w3-col.s5{width:41.66666%}.w3-col.s6{width:49.99999%}.w3-col.s7{width:58.33333%}.w3-col.s8{width:66.66666%}
+.w3-col.s9{width:74.99999%}.w3-col.s10{width:83.33333%}.w3-col.s11{width:91.66666%}.w3-col.s12{width:99.99999%}
+@media (min-width:550px){.w3-col.my-ms1{width:8.33333%}.w3-col.my-ms2{width:16.66666%}.w3-col.my-ms3{width:24.99999%}.w3-col.my-ms4{width:33.33333%}
+.w3-col.my-ms5{width:41.66666%}.w3-col.my-ms6{width:49.99999%}.w3-col.my-ms7{width:58.33333%}.w3-col.my-ms8{width:66.66666%}
+.w3-col.my-ms9{width:74.99999%}.w3-col.my-ms10{width:83.33333%}.w3-col.my-ms11{width:91.66666%}.w3-col.my-ms12{width:99.99999%}}
+@media (min-width:601px){.w3-col.m1{width:8.33333%}.w3-col.m2{width:16.66666%}.w3-col.m3,.w3-quarter{width:24.99999%}.w3-col.m4,.w3-third{width:33.33333%}
+.w3-col.m5{width:41.66666%}.w3-col.m6,.w3-half{width:49.99999%}.w3-col.m7{width:58.33333%}.w3-col.m8,.w3-twothird{width:66.66666%}
+.w3-col.m9,.w3-threequarter{width:74.99999%}.w3-col.m10{width:83.33333%}.w3-col.m11{width:91.66666%}.w3-col.m12{width:99.99999%}}
+@media (min-width:993px){.w3-col.l1{width:8.33333%}.w3-col.l2{width:16.66666%}.w3-col.l3{width:24.99999%}.w3-col.l4{width:33.33333%}
+.w3-col.l5{width:41.66666%}.w3-col.l6{width:49.99999%}.w3-col.l7{width:58.33333%}.w3-col.l8{width:66.66666%}
+.w3-col.l9{width:74.99999%}.w3-col.l10{width:83.33333%}.w3-col.l11{width:91.66666%}.w3-col.l12{width:99.99999%}}
