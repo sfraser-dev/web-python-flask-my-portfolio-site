@@ -4,27 +4,65 @@
 {% block content %}
 <main class="w3-container my-home-page-container my-home-page-limit-width">
     <div class="w3-margin-left">
-        <div class="w3-container">
+        <div class="w3-panel w3-theme-l5 w3-leftbar w3-border-black">
             <p>A portfolio site to showcase my web development projects.</p>
-            <p>Site is fully responsive and built with a mobile-first design.</p>
-            <p>CV / IET (put here!!!!!!!!)</p>
-            Additional bootcamp completion certificates awarded (courses taken concurrently while doing the JustIT bootcamp):
-            <ul>
-                <li>Python: "The Complete Python Bootcamp" by Jose Portilla (Udemy)</li>
-                <li>SQL: "The Complete SQL Bootcamp" by Jose Portilla (Udemy)</li>
-                <li>JavaScript: "Data Structures and Algorithms" (FreeCodeCamp)</li>
-            </ul>
-            Technologies used to build this portfolio site:
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>W3.CSS</li>
-                <li>Python</li>
-                <li>Flask</li>
-            </ul>
-            Improvements: could add user authentication to microblog, each user access to own DB.
-
         </div>
+        <div class="w3-panel w3-theme-l3 w3-leftbar w3-border-black">
+            <p>Site is fully responsive and built with a mobile-first design.</p>
+        </div>
+        <div class="w3-panel w3-theme-l5 w3-leftbar w3-border-black">
+            <p>
+                Python, Flask, HTML and CSS were the technologies used to build this site.
+            </p>
+            <div class="w3-cell-row">
+                <img src="{{ url_for('static', filename='images/python-removebg-preview.png') }}"
+                    class="w3-cell my-home-page-images-python-flask" alt="python image">
+                <img src="{{ url_for('static', filename='images/flask-removebg-preview.png') }}"
+                    class="w3-cell my-home-page-images-python-flask" alt="flask image">
+                <img src="{{ url_for('static', filename='images/html5-removebg-preview.png') }}"
+                    class="w3-cell my-home-page-images-html-css" alt="html image">
+                <img src="{{ url_for('static', filename='images/css3-removebg-preview.png') }}"
+                    class="w3-cell my-home-page-images-html-css" alt="css image">
+            </div>
+            <p>
+                Deployed to <em>render.com</em> and a custom domain name linked.
+            </p>
+        </div>
+        <div class="w3-panel w3-theme-l3 w3-leftbar w3-border-black">
+            <p>
+                Additional bootcamp completion certificates awarded for:
+            </p>
+            <ul>
+                <li>Python</li>
+                <li>SQL</li>
+                <li>JavaScript</li>
+            </ul>
+            <p>
+                on Udemy and FreeCodeCamp.
+            </p>
+        </div>
+        <div class="w3-panel w3-theme-l5 w3-leftbar w3-border-black">
+            <p>
+                <a href="{{ url_for('static', filename='docs/Stewart-Fraser-CV.pdf') }}" target="_blank"
+                    rel="noopener noreferrer">
+                    <span class="w3-tag w3-round w3-green my-shared-animated-tag-link">
+                        CV</span></a>
+
+            </p>
+        </div>
+        <p>
+            Improvements: could add user authentication to microblog, each user access to own DB.
+        </p>
+        <p>
+            Backup site, run from vscode with github links
+        </p>
+        <p>
+            SQLite3 ReplIT
+        </p>
+        <p>
+            Best to include phone number on CV too.
+            Pat's partner no issue having done that.
+        </p>
     </div>
 </main>
 {% endblock %}

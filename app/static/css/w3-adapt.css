@@ -11,3 +11,10 @@ over the custom breakpoint and they still work as expected. */
 @media (min-width:993px){.w3-col.l1{width:8.33333%}.w3-col.l2{width:16.66666%}.w3-col.l3{width:24.99999%}.w3-col.l4{width:33.33333%}
 .w3-col.l5{width:41.66666%}.w3-col.l6{width:49.99999%}.w3-col.l7{width:58.33333%}.w3-col.l8{width:66.66666%}
 .w3-col.l9{width:74.99999%}.w3-col.l10{width:83.33333%}.w3-col.l11{width:91.66666%}.w3-col.l12{width:99.99999%}}
+
+/* Grabbing a small section from the w3-theme-dark-grey.css color theme */
+.w3-theme-l5 {color:#000 !important; background-color:#f6f6f6 !important}
+.w3-theme-l4 {color:#000 !important; background-color:#dfdfdf !important}
+.w3-theme-l3 {color:#000 !important; background-color:#c0c0c0 !important}
+.w3-theme-l2 {color:#fff !important; background-color:#a0a0a0 !important}
+.w3-theme-l1 {color:#fff !important; background-color:#818181 !important}

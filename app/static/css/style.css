@@ -47,6 +47,16 @@ body {
   line-height: var(--line-height-for-readability);
 }
 
+.my-home-page-images-python-flask {
+  width: 70px;
+  height: 70px;
+}
+
+.my-home-page-images-html-css {
+  width: 60px;
+  height: 70px;
+}
+
 /***** CONTACT PAGE. *****/
 .my-contact-container {
   font-size: 1.25rem;
@@ -110,6 +120,17 @@ body {
   margin-bottom: 5px;
 }
 
+/* Class used in PROJECT and HOME. */
+.my-shared-animated-tag-link {
+/* Animation for "view in production" tag link and CV tag link. */
+  font-size: 18px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.my-shared-animated-tag-link:hover {
+  transform: translate(4px, -4px);
+}
+
 /***** PROJECT (singular) PAGE. *****/
 /* These are the pages detailing each stand-alone project. */
 .my-project-base-title {
@@ -126,16 +147,6 @@ body {
 .my-project-base-hero-image-limit-width {
   max-width: 100%;
   height: auto;
-}
-
-/* Animatioin for "view in production" tag. */
-.my-project-base-view-production-tag {
-  font-size: 18px;
-  transition: transform 0.2s ease-in-out;
-}
-
-.my-project-base-view-production-tag:hover {
-  transform: translate(4px, -4px);
 }
 
 .my-project-microblog-diagram {
@@ -184,7 +195,7 @@ body {
 
   .my-home-page-container,
   .my-project-base-container,
-  .my-project-base-view-production-tag,
+  .my-shared-animated-tag-link,
   .my-shared-technologies-tag {
     font-size: 0.75rem;
   }
