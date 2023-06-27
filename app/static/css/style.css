@@ -42,19 +42,26 @@ body {
 
 /***** HOME PAGE. *****/
 .my-home-page-limit-width {
-  /* Limit to max size of w3.css small screen size. */
-  max-width: 600px;
+  max-width: 650px;
   line-height: var(--line-height-for-readability);
 }
 
-.my-home-page-images-python-flask {
-  width: 70px;
-  height: 70px;
+.my-home-flexbox-for-technology-images {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.my-home-page-images-html-css {
-  width: 60px;
-  height: 70px;
+.my-home-page-technology-images {
+  /* Mobile first design. */
+  width: 35px;
+  height: 40px;
+  margin: 3px;
+}
+
+.my-home-bottom-of-page-paragraph {
+  margin-bottom: 60px;
 }
 
 /***** CONTACT PAGE. *****/
@@ -122,7 +129,7 @@ body {
 
 /* Class used in PROJECT and HOME. */
 .my-shared-animated-tag-link {
-/* Animation for "view in production" tag link and CV tag link. */
+  /* Animation for "view in production" tag link and CV tag link. */
   font-size: 18px;
   transition: transform 0.2s ease-in-out;
 }
@@ -139,6 +146,7 @@ body {
 
 /* Limit the width that a project page can reach. */
 .my-project-base-container-limit-width {
+  /* Increased to 1200px at MQ-993px */
   max-width: 550px;
 }
 
@@ -150,23 +158,27 @@ body {
 }
 
 .my-project-microblog-diagram {
-  /* Auto-rescale the image. */
+  /* Set a max width and a max height. */
+  max-width: 340px;
+  max-height: 424px;
+  /* Auto-rescale the image if necessary. */
   width: 100%;
   height: auto;
   /* Center the image. */
+  /* zero margin top and bottom. */
+  /* auto margin left and right (will be made equal, thus centered). */
   margin: 0 auto;
-  display: block; 
-  /* Set max width and height. */
-  max-width: 340px;
-  max-height: 424px;
+  display: block;
 }
 
 /***** MQ BREAKPOINTS *****/
 @media only screen and (min-width: 993px) {
+
   /* Page width limit for the grid of projects. */
   .my-projects-container-limit-width {
     max-width: 1200px;
   }
+
   /* Page width limit for individual project description pages. */
   .my-project-base-container-limit-width {
     max-width: 1200px;
@@ -174,10 +186,12 @@ body {
 }
 
 /***** Handle tiny screens less than 311px. *****/
+/* Was aiming initial "mobile-first" design to work
+at 320px. But with this adaption, can go much lower. */
 @media only screen and (max-width: 310px) {
 
   /* W3.CSS ADAPTION: Implement a version of "w3-mobile"
-     on screen sizes of 0px to 310px */
+     on screen sizes of less than 310px */
   .my-w3-mobile {
     display: block;
     width: 100% !important;
@@ -201,3 +215,16 @@ body {
   }
 }
 
+@media only screen and (min-width: 390px) {
+  .my-home-page-technology-images {
+    width: 55px;
+    height: 60px;
+  }
+}
+
+@media only screen and (min-width: 490px) {
+  .my-home-page-technology-images {
+    width: 65px;
+    height: 70px;
+  }
+}
