@@ -49,7 +49,7 @@ def create_app():
             "name": "Film Database",
             "thumb": "images/film-wee.png",
             "hero": "images/film-hero.png",
-            "categories": ["Python", "SQL", "Pandas"],
+            "categories": ["Python", "Pandas", "SQLite"],
             "slug": "film-database",
             "production": "https://sfraser-film-database.onrender.com",
         },
