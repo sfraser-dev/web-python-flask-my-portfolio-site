@@ -83,7 +83,7 @@ body {
 /* This page displays all of the projects together in a grid. */
 .my-projects-container-limit-width {
   /* Increased to 1200px at MQ-993px */
-  max-width: 600px;
+  max-width: 650px;
 }
 
 .my-projects-card {
@@ -147,13 +147,13 @@ body {
 /* Limit the width that a project page can reach. */
 .my-project-base-container-limit-width {
   /* Increased to 1200px at MQ-993px */
-  max-width: 550px;
+  max-width: 650px;
 }
 
 /* Make the hero image scale while maintaining aspect ratio. */
 /* Limit the hero image's width to that of its container.  */
 .my-project-base-hero-image-limit-width {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -187,15 +187,16 @@ body {
 
 /***** Handle tiny screens less than 311px. *****/
 /* Was aiming initial "mobile-first" design to work
-at 320px. But with this adaption, can go much lower. */
+at 310px. But with this adaption, can go much lower. 
+/* Fine on Jiophone2-240px, looks good on GalaxyFold-280px */
 @media only screen and (max-width: 310px) {
-
   /* W3.CSS ADAPTION: Implement a version of "w3-mobile"
      on screen sizes of less than 310px */
   .my-w3-mobile {
     display: block;
     width: 100% !important;
     text-align: center;
+    font-size: 0.8rem;
   }
 
   .my-base-title-header {
@@ -214,6 +215,14 @@ at 320px. But with this adaption, can go much lower. */
     font-size: 0.75rem;
   }
 }
+
+/* My default values for "mobile-first" design work well
+for 310px-390px. The after-the-fact "max-width" media query
+above handles screens smaller than 310px and the "min-width"
+media queries below handle screens greater than 390px. I have
+a "limit-width" in place for most of the pages of 650px,
+essentially limits these pages to just a large phone screen
+or tablet, helps with mobile-first design. */
 
 @media only screen and (min-width: 390px) {
   .my-home-page-technology-images {
