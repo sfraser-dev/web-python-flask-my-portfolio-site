@@ -18,6 +18,7 @@ html {
 
 body {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /***** BASE PAGE (navbar and title). *****/
@@ -46,6 +47,15 @@ body {
   line-height: var(--line-height-for-readability);
 }
 
+.my-home-page-hero-images {
+   /* Set a max width and a max height. */
+   max-width: 250px;
+   max-height: 250px;
+   /* Auto-rescale the image if necessary. */
+   width: 100%;
+   height: auto; 
+}
+
 .my-home-flexbox-for-technology-images {
   display: flex;
   justify-content: space-around;
@@ -58,10 +68,6 @@ body {
   width: 35px;
   height: 40px;
   margin: 3px;
-}
-
-.my-home-bottom-of-page-paragraph {
-  margin-bottom: 60px;
 }
 
 /***** CONTACT PAGE. *****/
