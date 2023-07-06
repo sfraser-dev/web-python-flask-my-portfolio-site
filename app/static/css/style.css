@@ -51,7 +51,7 @@ body {
    /* Set a max width and a max height. */
    max-width: 250px;
    max-height: 250px;
-   /* Auto-rescale the image if necessary. */
+   /* Autoscale the image if necessary. */
    width: 100%;
    height: auto; 
 }
@@ -167,7 +167,7 @@ body {
   /* Set a max width and a max height. */
   max-width: 340px;
   max-height: 424px;
-  /* Auto-rescale the image if necessary. */
+  /* Autoscale the image if necessary. */
   width: 100%;
   height: auto;
   /* Center the image. */
@@ -175,6 +175,16 @@ body {
   /* auto margin left and right (will be made equal, thus centered). */
   margin: 0 auto;
   display: block;
+}
+
+/***** CERTIFICATES PAGE. *****/
+.my-certificates-images {
+  /* Set a max width and a max height. */
+  max-width: 500px;
+  max-height: 350px;
+  /* Autoscale the image if necessary. */
+  width: 100%;
+  height: auto;
 }
 
 /***** MQ BREAKPOINTS *****/

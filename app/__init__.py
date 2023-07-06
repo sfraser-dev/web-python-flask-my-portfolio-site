@@ -97,6 +97,11 @@ def create_app():
     def contact():
         return render_template("contact.html")
 
+    # Certificates endpoint creation.
+    @app.route("/certificates/")
+    def certificates():
+        return render_template("certificates.html")
+
     # Project/project-name slug endpoint creations.
     # <string:slug> is a route with a variable for the URL (variable slug as a string).
     # For example: 127.0.0.1:550/projects/dice-game
