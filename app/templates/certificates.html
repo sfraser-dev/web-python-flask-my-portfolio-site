@@ -3,19 +3,32 @@
 <!-- The body for the certificates page. -->
 {% block content %}
 <div class="w3-container">
-    <div class="w3-margin-left">
-        <p><a href="{{ url_for('static', filename='docs/cert-python-portilla.pdf') }}" target="_blank"
-                rel="noopener noreferrer">
-                <img src="../static/docs/cert-python-portilla.png" alt="python certificate"
-                    class="my-certificates-images w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black">
-            </a>
+
+    <div class="w3-container w3-shadow">
+        <h3>
+            <u><em>Online Python Bootcamp</em></u>
+        </h3>
+        <p>
+            "Begin with the basics of Python and progress to creating your own applications and games."
         </p>
-        <p><a href="{{ url_for('static', filename='docs/cert-sql-portilla.pdf') }}" target="_blank"
-                rel="noopener noreferrer">
-                <img src="../static/docs/cert-sql-portilla.png" alt="sql certificate"
-                    class="my-certificates-images w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black">
-            </a>
+        <a href="{{ url_for('static', filename='docs/cert-python-portilla.pdf') }}" target="_blank"
+            rel="noopener noreferrer">
+            <img src="../static/docs/cert-python-portilla.png" alt="python certificate"
+                class="my-certificates-image w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black">
+        </a>
+    </div>
+    <div class="w3-container w3-margin-top">
+        <h3>
+            <u><em>Online SQL Bootcamp</em></u>
+        </h3>
+        <p>
+            "Become an expert at SQL using PostgreSQL and PgAdmin".
         </p>
+        <a href="{{ url_for('static', filename='docs/cert-sql-portilla.pdf') }}" target="_blank"
+            rel="noopener noreferrer">
+            <img src="../static/docs/cert-sql-portilla.png" alt="sql certificate"
+                class="my-certificates-image w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black">
+        </a>
     </div>
 </div>
 

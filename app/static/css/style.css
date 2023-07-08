@@ -178,13 +178,15 @@ body {
 }
 
 /***** CERTIFICATES PAGE. *****/
-.my-certificates-images {
+.my-certificates-image {
   /* Set a max width and a max height. */
   max-width: 500px;
   max-height: 350px;
   /* Autoscale the image if necessary. */
   width: 100%;
   height: auto;
+  /* Override the default image margins */
+  margin: 0 0;
 }
 
 /***** MQ BREAKPOINTS *****/
