@@ -178,7 +178,18 @@ body {
 }
 
 /***** CERTIFICATES PAGE. *****/
-.my-certificates-image {
+.my-certificates-image-justit {
+  /* Set a max width and a max height. */
+  max-width: 350px;
+  max-height: 500px;
+  /* Autoscale the image if necessary. */
+  width: 100%;
+  height: auto;
+  /* Override the default image margins */
+  margin: 0 0;
+}
+
+.my-certificates-image-jose {
   /* Set a max width and a max height. */
   max-width: 500px;
   max-height: 350px;
