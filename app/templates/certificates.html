@@ -3,53 +3,80 @@
 <!-- The body for the certificates page. -->
 {% block content %}
 <div class="w3-container">
-
     <div class="w3-container">
-        <h2>
-            Bootcamp Certificates
-        </h2>
-
-        <h3>
-            <em>JustIT Software Development Bootcamp</em>
-        </h3>
+        <div class="w3-text-dark-grey">
+            <h1>Bootcamp Course Certificates</h1>
+        </div>
+    </div>
+    <div class="w3-container my-margin-top-10">
+        <h3>Online Backend Development and APIs Course</h3>
         <p>
-            "In-person three-month intensive bootcamp focusing on Python, JavaScript, SQL, CSS and HTML."
+            "Creating microservices using Node, JavaScript, Express and MongoDB."
         </p>
-        <a href="{{ url_for('static', filename='docs/cert-JustIT-completion-certificate.pdf') }}" target="_blank"
-            rel="noopener noreferrer">
-            <img src="../static/docs/cert-JustIT-completion-certificate.png" alt="JustIT certificate"
-                class="my-certificates-image-justit w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black">
+        <a
+            href="{{ url_for('static', filename='docs/cert-fcc-backend-api-cert.pdf') }}"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img
+                src="../static/docs/cert-fcc-backend-api-cert.png"
+                alt="FCC certificate"
+                class="my-certificates-image-fcc-api w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black"
+            />
+        </a>
+    </div>
+    <div class="w3-container my-margin-top-40">
+        <h3>Just IT Software Development Bootcamp</h3>
+        <p>
+            "In-person three-month intensive bootcamp focusing on Python,
+            JavaScript, SQL, CSS and HTML."
+        </p>
+        <a
+            href="{{ url_for('static', filename='docs/cert-JustIT-completion-certificate.pdf') }}"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img
+                src="../static/docs/cert-JustIT-completion-certificate.png"
+                alt="JustIT certificate"
+                class="my-certificates-image-justit w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black"
+            />
+        </a>
+    </div>
+    <div class="w3-container my-margin-top-40">
+        <h3>Online SQL Bootcamp</h3>
+        <p>"Become an expert at SQL using PostgreSQL and PgAdmin".</p>
+        <a
+            href="{{ url_for('static', filename='docs/cert-sql-portilla.pdf') }}"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img
+                src="../static/docs/cert-sql-portilla.png"
+                alt="sql certificate"
+                class="my-certificates-image-jose w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black"
+            />
         </a>
     </div>
 
-    <div class="w3-container w3-margin-top">
-        <h3>
-            <em>Online Python Bootcamp</em>
-        </h3>
+    <div class="w3-container my-margin-top-40">
+        <h3>Online Python Bootcamp</h3>
         <p>
-            "Begin with the basics of Python and progress to creating your own applications and games."
+            "Begin with the basics of Python and progress to creating your own
+            applications and games."
         </p>
-        <a href="{{ url_for('static', filename='docs/cert-python-portilla.pdf') }}" target="_blank"
-            rel="noopener noreferrer">
-            <img src="../static/docs/cert-python-portilla.png" alt="python certificate"
-                class="my-certificates-image-jose w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black">
+        <a
+            href="{{ url_for('static', filename='docs/cert-python-portilla.pdf') }}"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img
+                src="../static/docs/cert-python-portilla.png"
+                alt="python certificate"
+                class="my-certificates-image-jose w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black"
+            />
         </a>
     </div>
-
-    <div class="w3-container w3-margin-top">
-        <h3>
-            <em>Online SQL Bootcamp</em>
-        </h3>
-        <p>
-            "Become an expert at SQL using PostgreSQL and PgAdmin".
-        </p>
-        <a href="{{ url_for('static', filename='docs/cert-sql-portilla.pdf') }}" target="_blank"
-            rel="noopener noreferrer">
-            <img src="../static/docs/cert-sql-portilla.png" alt="sql certificate"
-                class="my-certificates-image-jose w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black">
-        </a>
-    </div>
-
 </div>
 
 {% endblock %}

@@ -178,10 +178,21 @@ body {
 }
 
 /***** CERTIFICATES PAGE. *****/
+.my-certificates-image-fcc-api{
+  /* Set a max width and a max height. */
+  max-width: 500px;
+  /* max-height: 350px; */
+  /* Autoscale the image if necessary. */
+  width: 100%;
+  height: auto;
+  /* Override the default image margins */
+  margin: 0 0;
+}
+
 .my-certificates-image-justit {
   /* Set a max width and a max height. */
   max-width: 350px;
-  max-height: 500px;
+  /* max-height: 500px; */
   /* Autoscale the image if necessary. */
   width: 100%;
   height: auto;
@@ -192,12 +203,20 @@ body {
 .my-certificates-image-jose {
   /* Set a max width and a max height. */
   max-width: 500px;
-  max-height: 350px;
+  /* max-height: 350px; */
   /* Autoscale the image if necessary. */
   width: 100%;
   height: auto;
   /* Override the default image margins */
   margin: 0 0;
+}
+
+.my-margin-top-40 {
+  margin-top: 40px;
+}
+
+.my-margin-top-10 {
+  margin-top: 10px;
 }
 
 /***** MQ BREAKPOINTS *****/
