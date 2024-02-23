@@ -8,7 +8,25 @@
             <h1>Bootcamp and Course Certificates</h1>
         </div>
     </div>
+    <!-- Top certificate has margin top 10, all the others have margin top 40 -->
     <div class="w3-container my-margin-top-10">
+        <h3>Online C# Course</h3>
+        <p>
+            "Comprehensive introduction to the C# programming language with Microsoft."
+        </p>
+        <a
+            href="{{ url_for('static', filename='docs/cert-fcc-ms-csharp.pdf') }}"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img
+                src="../static/docs/cert-fcc-ms-csharp.png"
+                alt="FCC certificate"
+                class="my-certificates-image-fcc-api w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black"
+            />
+        </a>
+    </div>
+    <div class="w3-container my-margin-top-40">
         <h3>Online Go (Golang) Course</h3>
         <p>
             "Mastering the Go programming language."
