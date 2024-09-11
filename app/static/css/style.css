@@ -53,7 +53,7 @@ body {
    max-height: 250px;
    /* Autoscale the image if necessary. */
    width: 100%;
-   height: auto; 
+   height: auto;
 }
 
 .my-home-flexbox-for-technology-images {
@@ -235,7 +235,7 @@ body {
 
 /***** Handle tiny screens less than 311px. *****/
 /* Was aiming initial "mobile-first" design to work
-at 310px. But with this adaption, can go much lower. 
+at 310px. But with this adaption, can go much lower.
 /* Fine on Jiophone2-240px, looks good on GalaxyFold-280px */
 @media only screen and (max-width: 310px) {
   /* W3.CSS ADAPTION: Implement a version of "w3-mobile"

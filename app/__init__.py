@@ -59,11 +59,11 @@ def create_app():
     # A dictionary comprehension that loads the project's website slug and
     # maps it to the project itself.
     slug_to_project = {project["slug"]: project for project in projects}
-    
+
     # Gives a mapping of slugs to projects as a single dictionary. This is a
     # common way of "making an index" to make it easy to search for a single
     # property we're interested in. For example:
-    # { 
+    # {
     #   "drum-set": {
     #           "name": "Drum Set",
     #           "thumb": "images/drum-wee.png",
@@ -131,6 +131,6 @@ def create_app():
     #     abort(500)
 
     # Flask app factory.
-    return app      
+    return app
 
 # 400 errors if handling form data

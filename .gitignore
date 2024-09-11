@@ -1,10 +1,12 @@
 # Created by https://www.toptal.com/developers/gitignore/api/flask
 # Edit at https://www.toptal.com/developers/gitignore?templates=flask
 
-### Mine ###
+### Me ###
 *.zip
 *.7z
 .flaskenv
+*.swp
+*~
 
 ### Flask ###
 instance/*
