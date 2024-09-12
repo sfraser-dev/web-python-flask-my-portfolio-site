@@ -70,18 +70,18 @@ body {
     margin: 3px;
 }
 
-/***** CONTACT PAGE. *****/
-.my-contact-container {
+/***** INFO PAGE. *****/
+.my-info-container {
     font-size: 1.25rem;
     margin-bottom: 30px;
     transition: transform 0.2s ease-in-out;
 }
 
-.my-contact-container:hover {
+.my-info-container:hover {
     transform: translate(4px, -4px);
 }
 
-.my-contact-link {
+.my-info-link {
     text-decoration: none;
 }
 
@@ -250,7 +250,7 @@ at 310px. But with this adaption, can go much lower.
         font-size: 1.5rem;
     }
 
-    .my-contact-container {
+    .my-info-container {
         font-size: 0.9rem;
         margin-bottom: 20px;
     }
