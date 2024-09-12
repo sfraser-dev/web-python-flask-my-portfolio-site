@@ -9,24 +9,36 @@
 
         <!-- Responsive w3.css grid. -->
         <div class="w3-col l3 my-ms6 s12 w3-center">
-
             <!-- Use the class to remove the default link text decoration. -->
-            <a class="my-projects-card-link" href="{{ url_for('project', slug=project['slug']) }}">
+            <a
+                class="my-projects-card-link"
+                href="{{ url_for('project', slug=project['slug']) }}"
+            >
                 <!-- The card (which is fully within an anchor tag - entirely clickable). -->
-                <article class="w3-card-4 w3-light-gray w3-center my-projects-card my-projects-card-limit-width">
+                <article
+                    class="w3-card-4 w3-light-gray w3-center my-projects-card my-projects-card-limit-width"
+                >
                     <!-- The name of this project. -->
-                    <h2 class="my-projects-card-title">{{ project["name"] }}</h2>
-                    <img class="my-projects-card-image" src="{{ url_for('static', filename=project['thumb']) }}"
-                        alt="{{ project['name'] }} hero image">
+                    <h2 class="my-projects-card-title">
+                        {{ project["name"] }}
+                    </h2>
+                    <img
+                        class="my-projects-card-image"
+                        src="{{ url_for('static', filename=project['thumb']) }}"
+                        alt="{{ project['name'] }} hero image"
+                    />
                     <header>
                         <!-- A list of all the categories (technologies used) for the project. -->
                         {% for category in project["categories"] %}
-                        <div class="w3-tag w3-round w3-white my-shared-technologies-tag">{{ category }}</div>
+                        <div
+                            class="w3-tag w3-round w3-white my-shared-technologies-tag"
+                        >
+                            {{ category }}
+                        </div>
                         {% endfor %}
                     </header>
                 </article>
             </a>
-
         </div>
         {% endfor %}
     </section>

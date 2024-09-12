@@ -1,6 +1,7 @@
 from flask import Flask, render_template, abort
 from dotenv import load_dotenv
 
+
 # Flask app factory.
 def create_app():
 
@@ -103,6 +104,11 @@ def create_app():
     def certificates():
         return render_template("certificates.html")
 
+    # CV endpoint creation.
+    @app.route("/cv/")
+    def cv():
+        return render_template("cv.html")
+
     # Project/project-name slug endpoint creations.
     # <string:slug> is a route with a variable for the URL (variable slug as a string).
     # For example: 127.0.0.1:550/projects/dice-game
@@ -125,6 +131,7 @@ def create_app():
     @app.errorhandler(500)
     def internal_server_error(error):
         return render_template("500.html"), 500
+
     # # A 500 endpoint to test 500 error handling (via typing of 127.0.0.1:5500/500).
     # @app.route("/500")
     # def error500():
@@ -132,5 +139,6 @@ def create_app():
 
     # Flask app factory.
     return app
+
 
 # 400 errors if handling form data

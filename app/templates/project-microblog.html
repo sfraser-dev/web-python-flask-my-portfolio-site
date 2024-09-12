@@ -1,16 +1,23 @@
-{% extends "project-base.html" %}
-
-{% block project_written_content %}
+{% extends "project-base.html" %} {% block project_written_content %}
 <p>
     A simple microblogging page. A post is read by Python / Flask and then saved
-    into a MongoDB Cloud Atlas database. Previous posts are read by Python / Flask from the database and are displayed on the page where they can be seen and deleted.
+    into a MongoDB Cloud Atlas database. Previous posts are read by Python /
+    Flask from the database and are displayed on the page where they can be seen
+    and deleted.
 </p>
 <p>
-    <strong>It may take some time for this Flask project to spin up as it's hosted on a free Render instance. It will also spin down after a period of inactivity</strong>
+    <strong
+        >It may take some time for this Flask project to spin up as it's hosted
+        on a free Render instance. It will also spin down after a period of
+        inactivity</strong
+    >
 </p>
 <div class="my-project-microblog-diagram-wrapper w3-margin-bottom">
-    <img class="my-project-microblog-diagram" src="{{ url_for('static', filename='images/microblog.drawio.png') }}"
-        alt="setup diagram">
+    <img
+        class="my-project-microblog-diagram"
+        src="{{ url_for('static', filename='images/microblog.drawio.png') }}"
+        alt="setup diagram"
+    />
 </div>
 <div class="w3-tag w3-round w3-white my-shared-technologies-tag">Python</div>
 <div class="w3-tag w3-round w3-white my-shared-technologies-tag">Flask</div>

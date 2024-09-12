@@ -1,59 +1,108 @@
 <!-- The base template that other files will extend. -->
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Stewart Fraser</title>
+        <link
+            rel="icon"
+            href="{{ url_for('static', filename='images/favicons/program.png') }}"
+        />
+        <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/w3.css') }}"> -->
+        <link
+            rel="stylesheet"
+            href="https://www.w3schools.com/w3css/4/w3.css"
+        />
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='css/w3-adapt.css') }}"
+        />
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='css/style.css') }}"
+        />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stewart Fraser</title>
-    <link rel="icon" href="{{ url_for('static', filename='images/favicons/program.png') }}">
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/w3.css') }}"> -->
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/w3-adapt.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
+    <body>
+        <header class="w3-container">
+            <nav class="w3-bar w3-black w3-card-4 w3-round">
+                <!-- Make the active link white and non-active links gray. -->
+                <!-- Don't underline active white link on hover. -->
+                <!-- Do underline non-active gray links on hover. -->
+                {% if request.path == url_for('home') %}
+                <a
+                    href="{{ url_for('home') }}"
+                    class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-active my-w3-mobile"
+                    >Home</a
+                >
+                {% else %}
+                <a
+                    href="{{ url_for('home') }}"
+                    class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-inactive my-w3-mobile"
+                    >Home</a
+                >
+                {% endif %} {% if request.path == url_for('projects_page') %}
+                <a
+                    href="{{ url_for('projects_page') }}"
+                    class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-active my-w3-mobile"
+                    >Projects</a
+                >
+                {% else %}
+                <a
+                    href="{{ url_for('projects_page') }}"
+                    class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-inactive my-w3-mobile"
+                    >Projects</a
+                >
+                {% endif %} {% if request.path == url_for('certificates') %}
+                <a
+                    href="{{ url_for('certificates') }}"
+                    class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-active my-w3-mobile"
+                    >Certs</a
+                >
+                {% else %}
+                <a
+                    href="{{ url_for('certificates') }}"
+                    class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-inactive my-w3-mobile"
+                    >Certs</a
+                >
+                {% endif %} {% if request.path == url_for('cv') %}
+                <a
+                    href="{{ url_for('cv') }}"
+                    class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-active my-w3-mobile"
+                    >CV</a
+                >
+                {% else %}
+                <a
+                    href="{{ url_for('cv') }}"
+                    class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-inactive my-w3-mobile"
+                    >CV</a
+                >
+                {% endif %} {% if request.path == url_for('contact') %}
+                <a
+                    href="{{ url_for('contact') }}"
+                    class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-active my-w3-mobile"
+                    >Contact</a
+                >
+                {% else %}
+                <a
+                    href="{{ url_for('contact') }}"
+                    class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-inactive my-w3-mobile"
+                    >Contact</a
+                >
+                {% endif %}
+            </nav>
 
-<body>
-    <header class="w3-container">
-        <nav class="w3-bar w3-black w3-card-4 w3-round">
-            <!-- Make the active link white and non-active links gray. -->
-            <!-- Don't underline active white link on hover. -->
-            <!-- Do underline non-active gray links on hover. -->
-            {% if request.path == url_for('home') %}
-            <a href="{{ url_for('home') }}" class="w3-text-gray w3-bar-item w3-padding-16 
-                my-base-nav-link-active my-w3-mobile">Home</a>
-            {% else %}
-            <a href="{{ url_for('home') }}" class="w3-text-gray w3-bar-item w3-padding-16
-                my-base-nav-link-inactive my-w3-mobile">Home</a>
-            {% endif %}
+            <div class="w3-container w3-section">
+                <h1 class="my-base-title-header">Stewart Fraser</h1>
+            </div>
+        </header>
+        <!-- Files that extend base.html put their content here -->
+        {% block content %} {% endblock %}
 
-            {% if request.path == url_for('projects_page') %}
-            <a href="{{ url_for('projects_page') }}" class="w3-text-gray w3-bar-item w3-padding-16
-                my-base-nav-link-active my-w3-mobile">Projects</a>
-            {% else %}
-            <a href="{{ url_for('projects_page') }}" class="w3-text-gray w3-bar-item w3-padding-16
-                my-base-nav-link-inactive my-w3-mobile">Projects</a>
-            {% endif %}
-
-            {% if request.path == url_for('contact') %}
-            <a href="{{ url_for('contact') }}" class="w3-text-gray w3-bar-item w3-padding-16
-                my-base-nav-link-active my-w3-mobile">Contact</a>
-            {% else %}
-            <a href="{{ url_for('contact') }}" class="w3-text-gray w3-bar-item w3-padding-16
-                my-base-nav-link-inactive my-w3-mobile">Contact</a>
-            {% endif %}
-        </nav>
-
-        <div class="w3-container w3-section">
-            <h1 class="my-base-title-header">Stewart Fraser</h1>
-        </div>
-
-    </header>
-    <!-- Files that extend base.html put their content here -->
-    {% block content %}
-    {% endblock %}
-
-    <script src="https://kit.fontawesome.com/316af999ed.js" crossorigin="anonymous"></script>
-</body>
-
+        <script
+            src="https://kit.fontawesome.com/316af999ed.js"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>

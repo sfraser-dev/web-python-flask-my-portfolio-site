@@ -2,235 +2,234 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /***** VARIABLES. *****/
 :root {
-  /* A common readability setting */
-  --line-height-for-readability: 150%;
+    /* A common readability setting */
+    --line-height-for-readability: 150%;
 }
 
 /***** ELEMENT SELECTORS. *****/
 html {
-  font-family: "Lato", sans-serif;
+    font-family: "Lato", sans-serif;
 }
 
 body {
-  margin-top: 20px;
-  margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /***** BASE PAGE (navbar and title). *****/
 .my-base-nav-link-inactive {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .my-base-nav-link-inactive:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* Need to use !important to override w3.css colors */
 .my-base-nav-link-active {
-  color: white !important;
-  text-decoration: none;
+    color: white !important;
+    text-decoration: none;
 }
 
 .my-base-title-header {
-  text-decoration: underline;
-  text-underline-offset: 5px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
 }
 
 /***** HOME PAGE. *****/
 .my-home-page-limit-width {
-  max-width: 650px;
-  line-height: var(--line-height-for-readability);
+    max-width: 650px;
+    line-height: var(--line-height-for-readability);
 }
 
 .my-home-page-hero-images {
-   /* Set a max width and a max height. */
-   max-width: 250px;
-   max-height: 250px;
-   /* Autoscale the image if necessary. */
-   width: 100%;
-   height: auto;
+    /* Set a max width and a max height. */
+    max-width: 250px;
+    max-height: 250px;
+    /* Autoscale the image if necessary. */
+    width: 100%;
+    height: auto;
 }
 
 .my-home-flexbox-for-technology-images {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .my-home-page-technology-images {
-  /* Mobile first design. */
-  width: 35px;
-  height: 40px;
-  margin: 3px;
+    /* Mobile first design. */
+    width: 35px;
+    height: 40px;
+    margin: 3px;
 }
 
 /***** CONTACT PAGE. *****/
 .my-contact-container {
-  font-size: 1.25rem;
-  margin-bottom: 30px;
-  transition: transform 0.2s ease-in-out;
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    transition: transform 0.2s ease-in-out;
 }
 
 .my-contact-container:hover {
-  transform: translate(4px, -4px);
+    transform: translate(4px, -4px);
 }
 
 .my-contact-link {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 /***** PROJECTS (plural) PAGE *****/
 /* This page displays all of the projects together in a grid. */
 .my-projects-container-limit-width {
-  /* Increased to 1200px at MQ-993px */
-  max-width: 650px;
+    /* Increased to 1200px at MQ-993px */
+    max-width: 650px;
 }
 
 .my-projects-card {
-  padding-bottom: 0.5rem;
-  margin: 16px 0 12px;
-  transition: transform 0.2s ease-in-out;
+    padding-bottom: 0.5rem;
+    margin: 16px 0 12px;
+    transition: transform 0.2s ease-in-out;
 }
 
 .my-projects-card-limit-width {
-  max-width: 250px;
+    max-width: 250px;
 }
 
 .my-projects-card-title {
-  padding-top: 5px;
-  font-size: 1.25rem;
-  font-weight: 500;
+    padding-top: 5px;
+    font-size: 1.25rem;
+    font-weight: 500;
 }
 
 .my-projects-card-link {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .my-projects-card-image {
-  max-width: 100%;
-  margin-bottom: 16px;
+    max-width: 100%;
+    margin-bottom: 16px;
 }
 
 .my-projects-card:hover {
-  transform: translate(6px, -6px)
+    transform: translate(6px, -6px);
 }
 
 /***** MULTI-USE. *****/
 /* Class used in PROJECT and PROJECTS pages. */
 .my-shared-technologies-tag {
-  font-size: 0.9rem;
-  font-weight: 500;
-  padding: 3px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #0e0e0e;
-  margin-bottom: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 3px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #0e0e0e;
+    margin-bottom: 5px;
 }
 
 /* Class used in PROJECT and HOME. */
 .my-shared-animated-tag-link {
-  /* Animation for "view in production" tag link and CV tag link. */
-  font-size: 18px;
-  transition: transform 0.2s ease-in-out;
+    /* Animation for "view in production" tag link and CV tag link. */
+    font-size: 18px;
+    transition: transform 0.2s ease-in-out;
 }
 
 .my-shared-animated-tag-link:hover {
-  transform: translate(4px, -4px);
+    transform: translate(4px, -4px);
 }
 
 /***** PROJECT (singular) PAGE. *****/
 /* These are the pages detailing each stand-alone project. */
 .my-project-base-title {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 /* Limit the width that a project page can reach. */
 .my-project-base-container-limit-width {
-  /* Increased to 1200px at MQ-993px */
-  max-width: 650px;
+    /* Increased to 1200px at MQ-993px */
+    max-width: 650px;
 }
 
 /* Make the hero image scale while maintaining aspect ratio. */
 /* Limit the hero image's width to that of its container.  */
 .my-project-base-hero-image-limit-width {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 .my-project-microblog-diagram {
-  /* Set a max width and a max height. */
-  max-width: 340px;
-  max-height: 424px;
-  /* Autoscale the image if necessary. */
-  width: 100%;
-  height: auto;
-  /* Center the image. */
-  /* zero margin top and bottom. */
-  /* auto margin left and right (will be made equal, thus centered). */
-  margin: 0 auto;
-  display: block;
+    /* Set a max width and a max height. */
+    max-width: 340px;
+    max-height: 424px;
+    /* Autoscale the image if necessary. */
+    width: 100%;
+    height: auto;
+    /* Center the image. */
+    /* zero margin top and bottom. */
+    /* auto margin left and right (will be made equal, thus centered). */
+    margin: 0 auto;
+    display: block;
 }
 
 /***** CERTIFICATES PAGE. *****/
-.my-certificates-image-fcc-api{
-  /* Set a max width and a max height. */
-  max-width: 500px;
-  /* max-height: 350px; */
-  /* Autoscale the image if necessary. */
-  width: 100%;
-  height: auto;
-  /* Override the default image margins */
-  margin: 0 0;
+.my-certificates-image-fcc-api {
+    /* Set a max width and a max height. */
+    max-width: 500px;
+    /* max-height: 350px; */
+    /* Autoscale the image if necessary. */
+    width: 100%;
+    height: auto;
+    /* Override the default image margins */
+    margin: 0 0;
 }
 
 .my-certificates-image-justit {
-  /* Set a max width and a max height. */
-  max-width: 350px;
-  /* max-height: 500px; */
-  /* Autoscale the image if necessary. */
-  width: 100%;
-  height: auto;
-  /* Override the default image margins */
-  margin: 0 0;
+    /* Set a max width and a max height. */
+    max-width: 350px;
+    /* max-height: 500px; */
+    /* Autoscale the image if necessary. */
+    width: 100%;
+    height: auto;
+    /* Override the default image margins */
+    margin: 0 0;
 }
 
 .my-certificates-image-jose {
-  /* Set a max width and a max height. */
-  max-width: 500px;
-  /* max-height: 350px; */
-  /* Autoscale the image if necessary. */
-  width: 100%;
-  height: auto;
-  /* Override the default image margins */
-  margin: 0 0;
+    /* Set a max width and a max height. */
+    max-width: 500px;
+    /* max-height: 350px; */
+    /* Autoscale the image if necessary. */
+    width: 100%;
+    height: auto;
+    /* Override the default image margins */
+    margin: 0 0;
 }
 
 .my-margin-top-40 {
-  margin-top: 40px;
+    margin-top: 40px;
 }
 
 .my-margin-top-30 {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 /***** MQ BREAKPOINTS *****/
 @media only screen and (min-width: 993px) {
+    /* Page width limit for the grid of projects. */
+    .my-projects-container-limit-width {
+        max-width: 1200px;
+    }
 
-  /* Page width limit for the grid of projects. */
-  .my-projects-container-limit-width {
-    max-width: 1200px;
-  }
-
-  /* Page width limit for individual project description pages. */
-  .my-project-base-container-limit-width {
-    max-width: 1200px;
-  }
+    /* Page width limit for individual project description pages. */
+    .my-project-base-container-limit-width {
+        max-width: 1200px;
+    }
 }
 
 /***** Handle tiny screens less than 311px. *****/
@@ -238,30 +237,30 @@ body {
 at 310px. But with this adaption, can go much lower.
 /* Fine on Jiophone2-240px, looks good on GalaxyFold-280px */
 @media only screen and (max-width: 310px) {
-  /* W3.CSS ADAPTION: Implement a version of "w3-mobile"
+    /* W3.CSS ADAPTION: Implement a version of "w3-mobile"
      on screen sizes of less than 310px */
-  .my-w3-mobile {
-    display: block;
-    width: 100% !important;
-    text-align: center;
-    font-size: 0.8rem;
-  }
+    .my-w3-mobile {
+        display: block;
+        width: 100% !important;
+        text-align: center;
+        font-size: 0.8rem;
+    }
 
-  .my-base-title-header {
-    font-size: 1.5rem;
-  }
+    .my-base-title-header {
+        font-size: 1.5rem;
+    }
 
-  .my-contact-container {
-    font-size: 0.9rem;
-    margin-bottom: 20px;
-  }
+    .my-contact-container {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
 
-  .my-home-page-container,
-  .my-project-base-container,
-  .my-shared-animated-tag-link,
-  .my-shared-technologies-tag {
-    font-size: 0.75rem;
-  }
+    .my-home-page-container,
+    .my-project-base-container,
+    .my-shared-animated-tag-link,
+    .my-shared-technologies-tag {
+        font-size: 0.75rem;
+    }
 }
 
 /* My default values for "mobile-first" design work well
@@ -273,15 +272,15 @@ essentially limits these pages to just a large phone screen
 or tablet, helps with mobile-first design. */
 
 @media only screen and (min-width: 390px) {
-  .my-home-page-technology-images {
-    width: 55px;
-    height: 60px;
-  }
+    .my-home-page-technology-images {
+        width: 55px;
+        height: 60px;
+    }
 }
 
 @media only screen and (min-width: 490px) {
-  .my-home-page-technology-images {
-    width: 65px;
-    height: 70px;
-  }
+    .my-home-page-technology-images {
+        width: 65px;
+        height: 70px;
+    }
 }
