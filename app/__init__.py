@@ -104,11 +104,6 @@ def create_app():
     def certificates():
         return render_template("certificates.html")
 
-    # CV endpoint creation.
-    @app.route("/cv/")
-    def cv():
-        return render_template("cv.html")
-
     # Project/project-name slug endpoint creations.
     # <string:slug> is a route with a variable for the URL (variable slug as a string).
     # For example: 127.0.0.1:550/projects/dice-game

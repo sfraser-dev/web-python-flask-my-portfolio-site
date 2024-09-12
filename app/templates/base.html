@@ -66,18 +66,6 @@
                     class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-inactive my-w3-mobile"
                     >Certs</a
                 >
-                {% endif %} {% if request.path == url_for('cv') %}
-                <a
-                    href="{{ url_for('cv') }}"
-                    class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-active my-w3-mobile"
-                    >CV</a
-                >
-                {% else %}
-                <a
-                    href="{{ url_for('cv') }}"
-                    class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-inactive my-w3-mobile"
-                    >CV</a
-                >
                 {% endif %} {% if request.path == url_for('contact') %}
                 <a
                     href="{{ url_for('contact') }}"
