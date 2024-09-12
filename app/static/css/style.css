@@ -219,26 +219,13 @@ body {
     margin-top: 30px;
 }
 
-/***** MQ BREAKPOINTS *****/
-@media only screen and (min-width: 993px) {
-    /* Page width limit for the grid of projects. */
-    .my-projects-container-limit-width {
-        max-width: 1200px;
-    }
+/***** MEDIA QUERY BREAKPOINTS *****/
 
-    /* Page width limit for individual project description pages. */
-    .my-project-base-container-limit-width {
-        max-width: 1200px;
-    }
-}
-
-/***** Handle tiny screens less than 311px. *****/
-/* Was aiming initial "mobile-first" design to work
-at 310px. But with this adaption, can go much lower.
-/* Fine on Jiophone2-240px, looks good on GalaxyFold-280px */
-@media only screen and (max-width: 310px) {
+/***** Handle tiny screens (350px and below) *****/
+/* Fine on Jiophone2-240px and looks good on GalaxyFold-280px */
+@media only screen and (max-width: 350px) {
     /* W3.CSS ADAPTION: Implement a version of "w3-mobile"
-     on screen sizes of less than 310px */
+     on screen sizes of less than 350px */
     .my-w3-mobile {
         display: block;
         width: 100% !important;
@@ -263,14 +250,9 @@ at 310px. But with this adaption, can go much lower.
     }
 }
 
-/* My default values for "mobile-first" design work well
-for 310px-390px. The after-the-fact "max-width" media query
-above handles screens smaller than 310px and the "min-width"
-media queries below handle screens greater than 390px. I have
-a "limit-width" in place for most of the pages of 650px,
-essentially limits these pages to just a large phone screen
-or tablet, helps with mobile-first design. */
-
+/***** My default values for "mobile-first" design work
+well for 350px-390px. Minor media query adaptions to
+the technology images on the homepage *****/
 @media only screen and (min-width: 390px) {
     .my-home-page-technology-images {
         width: 55px;
@@ -282,5 +264,22 @@ or tablet, helps with mobile-first design. */
     .my-home-page-technology-images {
         width: 65px;
         height: 70px;
+    }
+}
+
+/***** I'm already manually limiting the width ("limit-width")
+for many of the pages to 650px. This means I'm designing to a
+max of tablet only. Even on larger screens, my design will
+present as a tablet (mobile-first design) *****/
+/* Limit widths of just a couple of pages to 1200px */
+@media only screen and (min-width: 993px) {
+    /* Page width limit for the grid of projects. */
+    .my-projects-container-limit-width {
+        max-width: 1200px;
+    }
+
+    /* Page width limit for individual project description pages. */
+    .my-project-base-container-limit-width {
+        max-width: 1200px;
     }
 }
