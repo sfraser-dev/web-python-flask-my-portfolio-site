@@ -66,17 +66,17 @@
                     class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-inactive my-w3-mobile"
                     >Certs</a
                 >
-                {% endif %} {% if request.path == url_for('contact') %}
+                {% endif %} {% if request.path == url_for('info') %}
                 <a
-                    href="{{ url_for('contact') }}"
+                    href="{{ url_for('info') }}"
                     class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-active my-w3-mobile"
-                    >Contact</a
+                    >Info</a
                 >
                 {% else %}
                 <a
-                    href="{{ url_for('contact') }}"
+                    href="{{ url_for('info') }}"
                     class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-inactive my-w3-mobile"
-                    >Contact</a
+                    >Info</a
                 >
                 {% endif %}
             </nav>
