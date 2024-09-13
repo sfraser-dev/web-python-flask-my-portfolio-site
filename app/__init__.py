@@ -98,17 +98,17 @@ def create_app():
 
     # Home endpoint creation.
     @app.route("/")
-    def home():
+    def home_page():
         return render_template("home.html")
 
     # Info endpoint creation.
     @app.route("/info/")
-    def info():
+    def info_page():
         return render_template("info.html")
 
     # Certificates endpoint creation.
     @app.route("/certificates/")
-    def certificates():
+    def certificates_page():
         return render_template("certificates.html")
 
     # Project/project-name slug endpoint creations.
@@ -119,7 +119,7 @@ def create_app():
     # For example, if user visits http://127.0.0.1:5500/projects/dice-game,
     # then slug would be "dice-game".
     @app.route("/projects/<string:slug>")
-    def project(slug):
+    def project_index(slug):
         # User has input an URL we don't recognise - give 404 error.
         if slug not in slug_to_project:
             abort(404)

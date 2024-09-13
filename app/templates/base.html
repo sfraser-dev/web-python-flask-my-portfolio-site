@@ -30,15 +30,15 @@
                 <!-- Make the active link white and non-active links gray. -->
                 <!-- Don't underline active white link on hover. -->
                 <!-- Do underline non-active gray links on hover. -->
-                {% if request.path == url_for('home') %}
+                {% if request.path == url_for('home_page') %}
                 <a
-                    href="{{ url_for('home') }}"
+                    href="{{ url_for('home_page') }}"
                     class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-active my-w3-mobile"
                     >Home</a
                 >
                 {% else %}
                 <a
-                    href="{{ url_for('home') }}"
+                    href="{{ url_for('home_page') }}"
                     class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-inactive my-w3-mobile"
                     >Home</a
                 >
@@ -54,27 +54,27 @@
                     class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-inactive my-w3-mobile"
                     >Projects</a
                 >
-                {% endif %} {% if request.path == url_for('certificates') %}
+                {% endif %} {% if request.path == url_for('certificates_page') %}
                 <a
-                    href="{{ url_for('certificates') }}"
+                    href="{{ url_for('certificates_page') }}"
                     class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-active my-w3-mobile"
                     >Certs</a
                 >
                 {% else %}
                 <a
-                    href="{{ url_for('certificates') }}"
+                    href="{{ url_for('certificates_page') }}"
                     class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-inactive my-w3-mobile"
                     >Certs</a
                 >
-                {% endif %} {% if request.path == url_for('info') %}
+                {% endif %} {% if request.path == url_for('info_page') %}
                 <a
-                    href="{{ url_for('info') }}"
+                    href="{{ url_for('info_page') }}"
                     class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-active my-w3-mobile"
                     >Info</a
                 >
                 {% else %}
                 <a
-                    href="{{ url_for('info') }}"
+                    href="{{ url_for('info_page') }}"
                     class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-inactive my-w3-mobile"
                     >Info</a
                 >
