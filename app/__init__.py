@@ -12,7 +12,8 @@ def create_app():
     load_dotenv()
 
     # The projects to be shown in the projects-page grid via a for loop
-    # stored as a list of dictionaries.
+    # stored as a list of dictionaries. The slug is a unique identifier
+    # for the project.
     projects = [
         {
             "name": "Microblog",
@@ -57,13 +58,14 @@ def create_app():
         },
     ]
 
-    # A dictionary comprehension that loads the project's website slug and
-    # maps it to the project itself.
+    # A dictionary comprehension that iterates through the projects list, taking
+    # the slug of each project as the key and the entire project dictionary as the
+    # value. This creates a handy lookup table (index). We can now quickly retrieve
+    # the details of a project based on its slug.
     slug_to_project = {project["slug"]: project for project in projects}
 
-    # Gives a mapping of slugs to projects as a single dictionary. This is a
-    # common way of "making an index" to make it easy to search for a single
-    # property we're interested in. For example:
+    # slug_to_project is a dictionary that maps the slug (key) of a project to the
+    # project (value) itself:
     # {
     #   "drum-set": {
     #           "name": "Drum Set",
@@ -81,12 +83,17 @@ def create_app():
     #           "slug": "dice-game",
     #           "prod": "https://sfraser-microblog.onrender.com",
     #   }
+    #   # etc...
     # }
 
+    # Note the Flask function "url_for('projects_page')" will return
+    # the URL "/projects/" because:
+    # - the function/view is "projects_page()"
+    # - route/controller is "/projects/".
+    #
     # Projects endpoint creation.
-    # Note url_for('projects_page') returns URL "/projects/" as def is projects_page())
-    @app.route("/projects/")
-    def projects_page():
+    @app.route("/projects/")  # The route/controller is the URL path.
+    def projects_page():      # The function/view is the name of the endpoint.
         return render_template("projects.html", projects=projects)
 
     # Home endpoint creation.
@@ -105,8 +112,12 @@ def create_app():
         return render_template("certificates.html")
 
     # Project/project-name slug endpoint creations.
-    # <string:slug> is a route with a variable for the URL (variable slug as a string).
-    # For example: 127.0.0.1:550/projects/dice-game
+    #
+    # <string:slug> is a route with a variable for the URL.
+    # The variable is "slug" and it is of type "string".
+    #
+    # For example, if user visits http://127.0.0.1:5500/projects/dice-game,
+    # then slug would be "dice-game".
     @app.route("/projects/<string:slug>")
     def project(slug):
         # User has input an URL we don't recognise - give 404 error.
@@ -122,6 +133,8 @@ def create_app():
     def page_not_found(error):
         return render_template("404.html"), 404
 
+    # Other 400 errors if handling form data
+
     # Errorhandler endpoint creation. Run this when flask aborts with a 500 response.
     @app.errorhandler(500)
     def internal_server_error(error):
@@ -134,6 +147,3 @@ def create_app():
 
     # Flask app factory.
     return app
-
-
-# 400 errors if handling form data
