@@ -65,7 +65,7 @@ def create_app():
     slug_to_project = {project["slug"]: project for project in projects}
 
     # slug_to_project is a dictionary that maps the slug (key) of a project to the
-    # project (value) itself:
+    # project (value) itself. For example:
     # {
     #   "drum-set": {
     #           "name": "Drum Set",
