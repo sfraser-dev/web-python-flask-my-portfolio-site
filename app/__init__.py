@@ -53,7 +53,7 @@ def create_app():
             "hero": "images/film-hero.png",
             "categories": ["Python", "Pandas", "SQL"],
             "slug": "film-database",
-            "production": "https://replit.com/@koalaTreeBear/filmdatabase",
+            "production": "https://replit.com/@sfraser-dev/filmdatabase",
             # "production": "https://sfraser-film-database.onrender.com",
         },
     ]
