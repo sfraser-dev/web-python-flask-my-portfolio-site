@@ -65,17 +65,17 @@
                     class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-inactive my-w3-mobile"
                     >Certs</a
                 >
-                {% endif %} {% if request.path == url_for('info_page') %}
+                {% endif %} {% if request.path == url_for('contact_page') %}
                 <a
-                    href="{{ url_for('info_page') }}"
+                    href="{{ url_for('contact_page') }}"
                     class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-active my-w3-mobile"
-                    >Info</a
+                    >Contact</a
                 >
                 {% else %}
                 <a
-                    href="{{ url_for('info_page') }}"
+                    href="{{ url_for('contact_page') }}"
                     class="w3-text-gray w3-bar-item w3-padding-16 my-base-nav-link-inactive my-w3-mobile"
-                    >Info</a
+                    >Contact</a
                 >
                 {% endif %}
             </nav>

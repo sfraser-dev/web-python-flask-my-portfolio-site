@@ -99,10 +99,10 @@ def create_app():
     def home_page():
         return render_template("home.html")
 
-    # Info endpoint creation.
-    @app.route("/info/")
-    def info_page():
-        return render_template("info.html")
+    # Contact endpoint creation.
+    @app.route("/contact/")
+    def contact_page():
+        return render_template("contact.html")
 
     # Certificates endpoint creation.
     @app.route("/certificates/")
