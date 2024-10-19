@@ -54,7 +54,6 @@ def create_app():
             "categories": ["Python", "Pandas", "SQL"],
             "slug": "film-database",
             "production": "https://replit.com/@sfraser-dev/filmdatabase",
-            # "production": "https://sfraser-film-database.onrender.com",
         },
     ]
 
@@ -86,14 +85,13 @@ def create_app():
     #   # etc...
     # }
 
-    # Note the Flask function "url_for('projects_page')" will return
-    # the URL "/projects/" because:
-    # - the function/view is "projects_page()"
-    # - route/controller is "/projects/".
+    # Note the Flask function "url_for('projects_page')" will return the URL "/projects/" because:
+    # - the function is "projects_page()"
+    # - route is "/projects/".
     #
     # Projects endpoint creation.
-    @app.route("/projects/")  # The route/controller is the URL path.
-    def projects_page():      # The function/view is the name of the endpoint.
+    @app.route("/projects/")  # The route is the URL path.
+    def projects_page():      # The function is the name of the endpoint.
         return render_template("projects.html", projects=projects)
 
     # Home endpoint creation.
@@ -113,11 +111,9 @@ def create_app():
 
     # Project/project-name slug endpoint creations.
     #
-    # <string:slug> is a route with a variable for the URL.
-    # The variable is "slug" and it is of type "string".
+    # <string:slug> is a route with a variable for the URL. The variable is "slug" and it is of type "string".
     #
-    # For example, if user visits http://127.0.0.1:5500/projects/dice-game,
-    # then slug would be "dice-game".
+    # For example, if user visits http://127.0.0.1:5500/projects/dice-game, then slug would be "dice-game".
     @app.route("/projects/<string:slug>")
     def project_index(slug):
         # User has input an URL we don't recognise - give 404 error.
