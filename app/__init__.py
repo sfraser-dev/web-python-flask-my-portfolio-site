@@ -22,6 +22,7 @@ def create_app():
             "categories": ["Python", "Flask", "MongoDB"],
             "slug": "microblog",
             "production": "https://sfraser-microblog-u1r8.onrender.com",
+            "sourcecode": "https://github.com/sfraser-dev/python-flask-microblog",
         },
         {
             "name": "Memory Game",
@@ -30,6 +31,7 @@ def create_app():
             "categories": ["JavaScript", "CSS", "HTML"],
             "slug": "memory-game",
             "production": "https://sfraser-memory-game.onrender.com",
+            "sourcecode": "https://github.com/sfraser-dev/web-portfolio-memory-game",
         },
         {
             "name": "Dice Game",
@@ -38,6 +40,7 @@ def create_app():
             "categories": ["JavaScript", "CSS", "HTML"],
             "slug": "dice-game",
             "production": "https://sfraser-dice-game.onrender.com",
+            "sourcecode": "https://github.com/sfraser-dev/web-portfolio-dice-game",
         },
         {
             "name": "Drum Set",
@@ -46,6 +49,7 @@ def create_app():
             "categories": ["JavaScript", "CSS", "HTML"],
             "slug": "drum-set",
             "production": "https://sfraser-drum-set.onrender.com",
+            "sourcecode": "https://github.com/sfraser-dev/web-portfolio-drum-set",
         },
         {
             "name": "Film Database",
@@ -54,6 +58,7 @@ def create_app():
             "categories": ["Python", "Pandas", "SQL"],
             "slug": "film-database",
             "production": "https://replit.com/@sfraser-dev/filmdatabase",
+            "sourcecode": "https://github.com/sfraser-dev/python-jit-sqlite-pandas-film-db",
         },
     ]
 
