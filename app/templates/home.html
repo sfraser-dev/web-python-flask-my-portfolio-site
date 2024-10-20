@@ -4,73 +4,153 @@
 {% block content %}
 <main class="w3-container my-home-page-container my-home-page-limit-width">
     <div class="w3-margin-left">
-        <img src="../static/images/portrait.png" alt="hero image portrait" class="my-home-page-hero-images w3-round">
+        <img
+            src="../static/images/portrait.png"
+            alt="hero image portrait"
+            class="my-home-page-hero-images w3-round"
+        />
 
-        <div class="w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black">
-            <p>Hi, I'm Stewart Fraser. This is my <strong>portfolio</strong> site, where I showcase the projects I developed during an intensive three-month <strong>Just IT</strong> software development bootcamp.
+        <div
+            class="w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black"
+        >
+            <p>
+                Hi, I'm Stewart Fraser. This is my
+                <strong>portfolio</strong> site, where I showcase the projects I
+                developed during an intensive three-month
+                <strong>Just IT</strong> software development bootcamp.
             </p>
             <p>
-                Alongside coding, I am also <strong>passionate</strong> about chess, astronomy and football.
+                Alongside coding, I am also <strong>passionate</strong> about
+                chess, astronomy and football.
             </p>
         </div>
-        <div class="w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black">
-            <p>The Just IT bootcamp focused on five popular technologies:
-                <strong>JavaScript</strong>,
-                <strong>Python</strong>,
-                <strong>SQL</strong>,
-                <strong>CSS</strong> and
+        <div
+            class="w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black"
+        >
+            <p>
+                The Just IT bootcamp focused on five popular technologies:
+                <strong>JavaScript</strong>, <strong>Python</strong>,
+                <strong>SQL</strong>, <strong>CSS</strong> and
                 <strong>HTML</strong>.
             </p>
         </div>
-        <div class="w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black">
+        <div
+            class="w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black"
+        >
             <p>
-                I have <strong>extensive work experience</strong> in sectors such as academia, oil and gas, broadcast technology and finance.
+                I have <strong>extensive work experience</strong> in sectors
+                such as academia, oil and gas, broadcast technology and finance.
             </p>
             <p>
-                I have used numerous programming languages throughout my career, but mostly <strong>C</strong> and <strong>Perl</strong>.
+                I have used numerous programming languages throughout my career,
+                but mostly <strong>C</strong> and <strong>Perl</strong>.
             </p>
             <p>
-                <a href="{{ url_for('static', filename='docs/Stewart-Fraser-CV.pdf') }}" target="_blank"
-                    rel="noopener noreferrer">
-                    <span class="w3-tag w3-round w3-green my-shared-animated-tag-link">View CV</span>
+                <a
+                    href="{{ url_for('static', filename='docs/Stewart-Fraser-CV.pdf') }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <span
+                        class="w3-tag w3-round w3-green my-shared-animated-tag-link"
+                        >View CV</span
+                    >
                 </a>
             </p>
         </div>
-        <div class="w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black">
+        <div
+            class="w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black"
+        >
             <p>
-                Python, Flask, HTML and CSS were used to <strong>build this portfolio site</strong>.
+                Python, Flask, HTML and CSS were used to
+                <strong>build this portfolio site</strong>.
             </p>
             <div class="my-home-flexbox-for-technology-images w3-margin-bottom">
-                <img src="{{ url_for('static', filename='images/python-removebg-preview.png') }}"
-                    class="my-home-page-technology-images" alt="python image">
-                <img src="{{ url_for('static', filename='images/flask-removebg-preview.png') }}"
-                    class="my-home-page-technology-images" alt="flask image">
-                <img src="{{ url_for('static', filename='images/html5-removebg-preview.png') }}"
-                    class="my-home-page-technology-images" alt="html image">
-                <img src="{{ url_for('static', filename='images/css3-removebg-preview.png') }}"
-                    class="my-home-page-technology-images" alt="css image">
+                <img
+                    src="{{ url_for('static', filename='images/python-removebg-preview.png') }}"
+                    class="my-home-page-technology-images"
+                    alt="python image"
+                />
+                <img
+                    src="{{ url_for('static', filename='images/flask-removebg-preview.png') }}"
+                    class="my-home-page-technology-images"
+                    alt="flask image"
+                />
+                <img
+                    src="{{ url_for('static', filename='images/html5-removebg-preview.png') }}"
+                    class="my-home-page-technology-images"
+                    alt="html image"
+                />
+                <img
+                    src="{{ url_for('static', filename='images/css3-removebg-preview.png') }}"
+                    class="my-home-page-technology-images"
+                    alt="css image"
+                />
             </div>
-        </div>
-        <div class="w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black">
-            <p>This site and all projects are <strong>fully responsive</strong> and built with a
-                <strong>mobile-first</strong> design.</p>
-        </div>
-        <div class="w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black">
             <p>
-                Recent course certificates awarded for:
+                <a
+                    href="https://github.com/sfraser-dev/python-flask-my-portfolio-site"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <span
+                        class="w3-tag w3-round w3-green my-shared-animated-tag-link"
+                        >View source code</span
+                    ></a
+                >
             </p>
+        </div>
+        <div
+            class="w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black"
+        >
+            <p>
+                This site and all projects are
+                <strong>fully responsive</strong> and built with a
+                <strong>mobile-first</strong> design.
+            </p>
+        </div>
+        <div
+            class="w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black"
+        >
+            <p>Recent course certificates awarded for:</p>
             <ul>
-                <li><strong>Python</strong> "Data Analysis with Python" (freeCodeCamp)</li>
-                <li><strong>JavaScript</strong> "JavaScript Algorithms and Data Structures" (freeCodeCamp)</li>
-                <li><strong>C#</strong> "Foundational C# with Microsoft" (Microsoft & freeCodeCamp)</li>
-                <li><strong>Go</strong> "The Complete Developer's Guide" (Udemy)</li>
-                <li><strong>APIs</strong> "Backend Development and APIs" (freeCodeCamp)</li>
-                <li><strong>Software Development</strong> "In-person Bootcamp" (Just IT)</li>
-                <li><strong>SQL</strong> "The Complete SQL Bootcamp" (Udemy)</li>
-                <li><strong>Python</strong> "The Complete Python Bootcamp" (Udemy)</li>
-            </ul><p>
+                <li>
+                    <strong>Python</strong> "Data Analysis with Python"
+                    (freeCodeCamp)
+                </li>
+                <li>
+                    <strong>JavaScript</strong> "JavaScript Algorithms and Data
+                    Structures" (freeCodeCamp)
+                </li>
+                <li>
+                    <strong>C#</strong> "Foundational C# with Microsoft"
+                    (Microsoft & freeCodeCamp)
+                </li>
+                <li>
+                    <strong>Go</strong> "The Complete Developer's Guide" (Udemy)
+                </li>
+                <li>
+                    <strong>APIs</strong> "Backend Development and APIs"
+                    (freeCodeCamp)
+                </li>
+                <li>
+                    <strong>Software Development</strong> "In-person Bootcamp"
+                    (Just IT)
+                </li>
+                <li>
+                    <strong>SQL</strong> "The Complete SQL Bootcamp" (Udemy)
+                </li>
+                <li>
+                    <strong>Python</strong> "The Complete Python Bootcamp"
+                    (Udemy)
+                </li>
+            </ul>
+            <p>
                 <a href="{{ url_for('certificates_page') }}">
-                    <span class="w3-tag w3-round w3-green my-shared-animated-tag-link">View Certificates</span>
+                    <span
+                        class="w3-tag w3-round w3-green my-shared-animated-tag-link"
+                        >View Certificates</span
+                    >
                 </a>
             </p>
         </div>

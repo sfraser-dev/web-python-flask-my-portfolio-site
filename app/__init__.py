@@ -90,7 +90,7 @@ def create_app():
     #   # etc...
     # }
 
-    # Note the Flask function "url_for('projects_page')" will return the URL "/projects/" because:
+    # Note: The Flask function "url_for('projects_page')" will return the URL "/projects/" because:
     # - the function is "projects_page()"
     # - route is "/projects/".
     #
