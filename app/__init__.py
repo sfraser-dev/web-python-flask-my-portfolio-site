@@ -43,6 +43,15 @@ def create_app():
             "sourcecode": "https://github.com/sfraser-dev/web-portfolio-dice-game",
         },
         {
+            "name": "Notes Application",
+            "thumb": "images/notes-wee.png",
+            "hero": "images/notes-hero.png",
+            "categories": ["JavaScript", "CSS", "HTML"],
+            "slug": "notes-app",
+            "production": "https://sfraser-notes-app.onrender.com",
+            "sourcecode": "https://github.com/sfraser-dev/web-portfolio-notes-app",
+        },
+        {
             "name": "Drum Set",
             "thumb": "images/drum-wee.png",
             "hero": "images/drum-hero.png",
