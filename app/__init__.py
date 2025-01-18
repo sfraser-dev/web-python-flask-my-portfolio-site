@@ -73,36 +73,9 @@ def create_app():
 
     # A dictionary comprehension that iterates through the projects list, taking
     # the slug of each project as the key and the entire project dictionary as the
-    # value. This creates a handy lookup table (index). We can now quickly retrieve
-    # the details of a project based on its slug.
+    # value. This creates a handy lookup table (index).
     slug_to_project = {project["slug"]: project for project in projects}
 
-    # slug_to_project is a dictionary that maps the slug (key) of a project to the
-    # project (value) itself. For example:
-    # {
-    #   "drum-set": {
-    #           "name": "Drum Set",
-    #           "thumb": "images/drum-wee.png",
-    #           "hero": "images/drum-hero.png",
-    #           "categories": ["HTML", "CSS", "JS"],
-    #           "slug": "drum-set",
-    #           "prod": "https://sfraser-microblog.onrender.com",
-    #   },
-    #   "dice-game": {
-    #           "name": "Dice Game",
-    #           "thumb": "images/dice-wee.png",
-    #           "hero": "images/dice-hero.png",
-    #           "categories": ["HTML", "CSS", "JS"],
-    #           "slug": "dice-game",
-    #           "prod": "https://sfraser-microblog.onrender.com",
-    #   }
-    #   # etc...
-    # }
-
-    # Note: The Flask function "url_for('projects_page')" will return the URL "/projects/" because:
-    # - the function is "projects_page()"
-    # - route is "/projects/".
-    #
     # Projects endpoint creation.
     @app.route("/projects/")  # The route is the URL path.
     def projects_page():      # The function is the name of the endpoint.
@@ -124,18 +97,14 @@ def create_app():
         return render_template("certificates.html")
 
     # Project/project-name slug endpoint creations.
-    #
-    # <string:slug> is a route with a variable for the URL. The variable is "slug" and it is of type "string".
-    #
-    # For example, if user visits http://127.0.0.1:5500/projects/dice-game, then slug would be "dice-game".
+    # Example: <string:slug>, the variable is "slug" and it is of type "string".
+    # Example, if user visits http://127.0.0.1:5500/projects/dice-game, then slug is "dice-game".
     @app.route("/projects/<string:slug>")
     def project_index(slug):
         # User has input an URL we don't recognise - give 404 error.
         if slug not in slug_to_project:
             abort(404)
         # URL is recognised so render template using the project dictionary.
-        # So if the slug is "dice-game", the dictionary for "dice-game" will be passed
-        # as an argument to render_template (obtained from the slug_to_project mapping).
         return render_template(f"project-{slug}.html", project=slug_to_project[slug])
 
     # Errorhandler endpoint creation. Run this when flask aborts with a 404 response.
