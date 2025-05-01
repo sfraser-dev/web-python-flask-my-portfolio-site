@@ -2,6 +2,7 @@
 
 <!-- The body for the certificates page. -->
 {% block content %}
+
 <div class="w3-container">
     <div class="w3-container">
         <div class="w3-text-dark-grey">
@@ -9,178 +10,28 @@
         </div>
     </div>
     <!-- Top certificate has margin top 30, all the others have margin top 40 -->
-    <div class="w3-container my-margin-top-30">
-        <h3>Python: Online Data Analysis Course (October 2024)</h3>
-        <p>"Performing data analysis using Python."</p>
+    {% for cert in certificates %}
+    <div
+        class="w3-container {% if loop.index0 == 0 %}my-margin-top-30{% else %}my-margin-top-40{% endif %}"
+    >
+        <h3>{{ cert.title }}</h3>
+        <p>"{{ cert.desc }}"</p>
         <a
-            href="{{ url_for('static', filename='docs/cert-fcc-python-data-analysis-sf.pdf') }}"
+            href="{{ url_for('static', filename=cert.pdf) }}"
             target="_blank"
             rel="noopener noreferrer"
         >
             <img
-                src="{{ url_for('static', filename='docs/cert-fcc-python-data-analysis-sf.png') }}"
-                alt="Data Analysis FCC certificate"
+                src="{{ url_for('static', filename=cert.img) }}"
+                alt="{{ cert.alt }}"
                 class="my-certificates-image w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black"
             />
         </a>
-        <p>
-            <a
-                href="https://www.freecodecamp.org/certification/fcc011121fa-fa04-41d9-8189-0d017cab7a94/data-analysis-with-python-v7"
-                >View Data Analysis certificate on freeCodeCamp</a
-            >
-        </p>
+        {% if cert.link %}
+        <p><a href="{{ cert.link }}">{{ cert.label }}</a></p>
+        {% endif %}
     </div>
-    <div class="w3-container my-margin-top-40">
-        <h3>JavaScript: Online DSA Course (March 2024)</h3>
-        <p>"Implementing algorithms and data structures using JavaScript."</p>
-        <a
-            href="{{ url_for('static', filename='docs/cert-fcc-javascript-dsa-sf.pdf') }}"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            <img
-                src="{{ url_for('static', filename='docs/cert-fcc-javascript-dsa-sf.png') }}"
-                alt="JavaScript FCC certificate"
-                class="my-certificates-image w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black"
-            />
-        </a>
-        <p>
-            <a
-                href="https://www.freecodecamp.org/certification/fcc011121fa-fa04-41d9-8189-0d017cab7a94/javascript-algorithms-and-data-structures"
-                >View JavaScript DSA certificate on freeCodeCamp</a
-            >
-        </p>
-    </div>
-    <div class="w3-container my-margin-top-40">
-        <h3>C#: Online Microsoft Course (February 2024)</h3>
-        <p>
-            "Comprehensive introduction to the C# programming language with
-            Microsoft."
-        </p>
-        <a
-            href="{{ url_for('static', filename='docs/cert-fcc-ms-csharp-sf.pdf') }}"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            <img
-                src="{{ url_for('static', filename='docs/cert-fcc-ms-csharp-sf.png') }}"
-                alt="C# Microscoft and FCC certificate"
-                class="my-certificates-image w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black"
-            />
-        </a>
-        <p>
-            <a
-                href="https://freecodecamp.org/certification/fcc011121fa-fa04-41d9-8189-0d017cab7a94/foundational-c-sharp-with-microsoft"
-                >View C# certificate and exam results on freeCodeCamp</a
-            >
-        </p>
-    </div>
-    <div class="w3-container my-margin-top-40">
-        <h3>Go (Golang): Online Course (January 2024)</h3>
-        <p>"Mastering the Go programming language."</p>
-        <a
-            href="{{ url_for('static', filename='docs/cert-go-grider.pdf') }}"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            <img
-                src="{{ url_for('static', filename='docs/cert-go-grider.png') }}"
-                alt="Go Udemy certificate"
-                class="my-certificates-image w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black"
-            />
-        </a>
-        <p>
-            <a href="https://ude.my/UC-39842b87-9f21-4303-ad79-44a69760dd18"
-                >View Go certificate on Udemy</a
-            >
-        </p>
-    </div>
-    <div class="w3-container my-margin-top-40">
-        <h3>JavaScript: Online Backend Development and APIs Course (November 2023)</h3>
-        <p>
-            "Creating microservices using JavaScript, Node, Express and
-            MongoDB."
-        </p>
-        <a
-            href="{{ url_for('static', filename='docs/cert-fcc-backend-api-sf.pdf') }}"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            <img
-                src="{{ url_for('static', filename='docs/cert-fcc-backend-api-sf.png') }}"
-                alt="API FCC certificate"
-                class="my-certificates-image w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black"
-            />
-        </a>
-        <p>
-            <a
-                href="https://freecodecamp.org/certification/fcc011121fa-fa04-41d9-8189-0d017cab7a94/back-end-development-and-apis"
-                >View JavaScript Backend Development and APIs certificate on freeCodeCamp</a
-            >
-        </p>
-    </div>
-    <div class="w3-container my-margin-top-40">
-        <h3>Just IT Software Development Bootcamp (June 2023)</h3>
-        <p>
-            "In-person three-month intensive bootcamp focusing on Python,
-            JavaScript, SQL, CSS and HTML."
-        </p>
-        <a
-            href="{{ url_for('static', filename='docs/cert-JustIT-completion-certificate.pdf') }}"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            <img
-                src="{{ url_for('static', filename='docs/cert-JustIT-completion-certificate.png') }}"
-                alt="JustIT certificate"
-                class="my-certificates-image-justit w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black"
-            />
-        </a>
-    </div>
-    <div class="w3-container my-margin-top-40">
-        <h3>SQL: Online Course (May 2023)</h3>
-        <p>"Become an expert at SQL using PostgreSQL and PgAdmin".</p>
-        <a
-            href="{{ url_for('static', filename='docs/cert-sql-portilla.pdf') }}"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            <img
-                src="{{ url_for('static', filename='docs/cert-sql-portilla.png') }}"
-                alt="SQL Udemey Certificate"
-                class="my-certificates-image w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black"
-            />
-        </a>
-        <p>
-            <a href="https://ude.my/UC-ec6421c1-4784-4ba5-902d-229c7d08c2b4"
-                >View SQL certificate on Udemy</a
-            >
-        </p>
-    </div>
-
-    <div class="w3-container my-margin-top-40">
-        <h3>Python: Online Course (March 2023)</h3>
-        <p>
-            "Begin with the basics of Python and progress to creating your own
-            applications and games."
-        </p>
-        <a
-            href="{{ url_for('static', filename='docs/cert-python-portilla.pdf') }}"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            <img
-                src="{{ url_for('static', filename='docs/cert-python-portilla.png') }}"
-                alt="Python Udemy Certificate"
-                class="my-certificates-image w3-panel w3-theme-l5 w3-leftbar w3-topbar w3-bottombar w3-rightbar w3-border-black"
-            />
-        </a>
-        <p>
-            <a href="https://ude.my/UC-ac1d437e-d4f3-43ec-8b1f-27386db098b9"
-                >View Python certificate on Udemy</a
-            >
-        </p>
-    </div>
+    {% endfor %}
 </div>
 
 {% endblock %}

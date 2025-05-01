@@ -76,9 +76,93 @@ def create_app():
     # value. This creates a handy lookup table (index).
     slug_to_project = {project["slug"]: project for project in projects}
 
+    certificates = [
+        {
+            "title": "Python: Online Data Analysis Course (October 2024)",
+            "slug": "python-data-analysis",
+            "desc": "Performing data analysis using Python.",
+            "pdf": "docs/cert-fcc-python-data-analysis-sf.pdf",
+            "img": "docs/cert-fcc-python-data-analysis-sf.png",
+            "alt": "Data Analysis FCC certificate",
+            "link": "https://www.freecodecamp.org/certification/fcc011121fa-fa04-41d9-8189-0d017cab7a94/data-analysis-with-python-v7",
+            "label": "View Data Analysis certificate on freeCodeCamp",
+        },
+        {
+            "title": "JavaScript: Online DSA Course (March 2024)",
+            "slug": "javascript-dsa",
+            "desc": "Implementing algorithms and data structures using JavaScript.",
+            "pdf": "docs/cert-fcc-javascript-dsa-sf.pdf",
+            "img": "docs/cert-fcc-javascript-dsa-sf.png",
+            "alt": "JavaScript FCC certificate",
+            "link": "https://www.freecodecamp.org/certification/fcc011121fa-fa04-41d9-8189-0d017cab7a94/javascript-algorithms-and-data-structures",
+            "label": "View JavaScript DSA certificate on freeCodeCamp",
+        },
+        {
+            "title": "C#: Online Microsoft Course (February 2024)",
+            "slug": "csharp-microsoft",
+            "desc": "Comprehensive introduction to the C# programming language with Microsoft.",
+            "pdf": "docs/cert-fcc-ms-csharp-sf.pdf",
+            "img": "docs/cert-fcc-ms-csharp-sf.png",
+            "alt": "C# Microsoft and FCC certificate",
+            "link": "https://freecodecamp.org/certification/fcc011121fa-fa04-41d9-8189-0d017cab7a94/foundational-c-sharp-with-microsoft",
+            "label": "View C# certificate and exam results on freeCodeCamp",
+        },
+        {
+            "title": "Go (Golang): Online Course (January 2024)",
+            "slug": "golang-udemy",
+            "desc": "Mastering the Go programming language.",
+            "pdf": "docs/cert-go-grider.pdf",
+            "img": "docs/cert-go-grider.png",
+            "alt": "Go Udemy certificate",
+            "link": "https://ude.my/UC-39842b87-9f21-4303-ad79-44a69760dd18",
+            "label": "View Go certificate on Udemy",
+        },
+        {
+            "title": "JavaScript: Online Backend Development and APIs Course (November 2023)",
+            "slug": "javascript-backend-apis",
+            "desc": "Creating microservices using JavaScript, Node, Express and MongoDB.",
+            "pdf": "docs/cert-fcc-backend-api-sf.pdf",
+            "img": "docs/cert-fcc-backend-api-sf.png",
+            "alt": "API FCC certificate",
+            "link": "https://freecodecamp.org/certification/fcc011121fa-fa04-41d9-8189-0d017cab7a94/back-end-development-and-apis",
+            "label": "View JavaScript Backend Development and APIs certificate on freeCodeCamp",
+        },
+        {
+            # No online version of this certificate
+            "title": "Just IT Software Development Bootcamp (June 2023)",
+            "slug": "justit-bootcamp",
+            "desc": "In-person three-month intensive bootcamp focusing on Python, JavaScript, SQL, CSS and HTML.",
+            "pdf": "docs/cert-JustIT-completion-certificate.pdf",
+            "img": "docs/cert-JustIT-completion-certificate.png",
+            "alt": "JustIT certificate",
+            "link": "",
+            "label": "",
+        },
+        {
+            "title": "SQL: Online Course (May 2023)",
+            "slug": "sql-udemy",
+            "desc": "Become an expert at SQL using PostgreSQL and PgAdmin.",
+            "pdf": "docs/cert-sql-portilla.pdf",
+            "img": "docs/cert-sql-portilla.png",
+            "alt": "SQL Udemy Certificate",
+            "link": "https://ude.my/UC-ec6421c1-4784-4ba5-902d-229c7d08c2b4",
+            "label": "View SQL certificate on Udemy",
+        },
+        {
+            "title": "Python: Online Course (March 2023)",
+            "slug": "python-udemy",
+            "desc": "Begin with the basics of Python and progress to creating your own applications and games.",
+            "pdf": "docs/cert-python-portilla.pdf",
+            "img": "docs/cert-python-portilla.png",
+            "alt": "Python Udemy Certificate",
+            "link": "https://ude.my/UC-ac1d437e-d4f3-43ec-8b1f-27386db098b9",
+            "label": "View Python certificate on Udemy",
+        },
+    ]
+
     # Projects endpoint creation.
     @app.route("/projects/")  # The route is the URL path.
-    def projects_page():      # The function is the name of the endpoint.
+    def projects_page():  # The function is the name of the endpoint.
         return render_template("projects.html", projects=projects)
 
     # Home endpoint creation.
@@ -94,7 +178,7 @@ def create_app():
     # Certificates endpoint creation.
     @app.route("/certificates/")
     def certificates_page():
-        return render_template("certificates.html")
+        return render_template("certificates.html", certificates=certificates)
 
     # Project/project-name slug endpoint creations.
     # Example: <string:slug>, the variable is "slug" and it is of type "string".
