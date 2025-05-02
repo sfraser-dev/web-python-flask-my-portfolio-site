@@ -76,6 +76,7 @@ def create_app():
     # value. This creates a handy lookup table (index).
     slug_to_project = {project["slug"]: project for project in projects}
 
+    # List of certificate dictionaries, each containing metadata for dynamic rendering in the template.
     certificates = [
         {
             "title": "Python: Online Data Analysis Course (October 2024)",

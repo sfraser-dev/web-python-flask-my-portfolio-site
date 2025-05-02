@@ -9,8 +9,9 @@
             <h1>Bootcamp and Course Certificates</h1>
         </div>
     </div>
-    <!-- Top certificate has margin top 30, all the others have margin top 40 -->
+    <!-- Dynamically generate the certificates from a Python list of certificate dictionaries. -->
     {% for cert in certificates %}
+    <!-- Top certificate to have margin-top 30, all the others have margin-top 40. -->
     <div
         class="w3-container {% if loop.index0 == 0 %}my-margin-top-30{% else %}my-margin-top-40{% endif %}"
     >
