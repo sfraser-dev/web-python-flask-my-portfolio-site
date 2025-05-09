@@ -1,7 +1,7 @@
 /***** W3.CSS ADAPTION: Custom breakpoint added (550px). ****/
-/* Custom breakpoint in w3.css grid between medium and small (550px). Need to include the w3.css grid MQs
-(for the breakpoints greater than custom breakpoint, medium and large) AFTERWARDS so they still have priority
-over the custom breakpoint and they still work as expected. */
+/* Custom breakpoint from 550px to 600px in w3.css grid (ie: between medium and small). Need to include the
+w3.css grid MQs (for the breakpoints greater than custom breakpoint, medium and large) AFTERWARDS so they
+still have priority over the custom breakpoint and they still work as expected. */
 @media (min-width:550px){.w3-col.my-ms1{width:8.33333%}.w3-col.my-ms2{width:16.66666%}.w3-col.my-ms3{width:24.99999%}.w3-col.my-ms4{width:33.33333%}
 .w3-col.my-ms5{width:41.66666%}.w3-col.my-ms6{width:49.99999%}.w3-col.my-ms7{width:58.33333%}.w3-col.my-ms8{width:66.66666%}
 .w3-col.my-ms9{width:74.99999%}.w3-col.my-ms10{width:83.33333%}.w3-col.my-ms11{width:91.66666%}.w3-col.my-ms12{width:99.99999%}}
